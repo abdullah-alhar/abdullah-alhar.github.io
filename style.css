@@ -76,7 +76,7 @@ img {
   z-index: 10000;
   overflow: hidden;
   /* Step 1: sit visible, Step 2: fade out + slide up */
-  animation: pre-exit 0.9s 3.2s cubic-bezier(0.7, 0, 1, 1) forwards;
+  animation: pre-exit 0.9s 1.2s cubic-bezier(0.7, 0, 1, 1) forwards;
 }
 
 .pre-content {
@@ -86,7 +86,7 @@ img {
   align-items: center;
   opacity: 0;
   /* Logo: fades in, holds, then fades out — no scaling */
-  animation: logo-show 3s 0.3s ease-in-out forwards;
+  animation: logo-show 1.2s 0.2s ease-in-out forwards;
 }
 
 .pre .splash-img {
@@ -981,6 +981,13 @@ footer {
 
   .form-row {
     grid-template-columns: 1fr;
+  }
+
+  .image-frame {
+    width: 250px;
+    height: 300px;
+    margin: 0 auto;
+    aspect-ratio: auto;
   }
 
   .about-facts {
