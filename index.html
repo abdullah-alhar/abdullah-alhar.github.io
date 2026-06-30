@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abdullah Alhar — Developer</title>
+  <link rel="icon" type="image/png" href="assets/s_logo.png" />
+  <link rel="shortcut icon" type="image/png" href="assets/s_logo.png" />
+  <link rel="apple-touch-icon" href="assets/s_logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Great+Vibes&family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- SPLASH SCREEN -->
+  <div class="pre">
+    <div class="pre-content">
+      <img src="assets/s_logo.png" alt="AA Logo" class="logo-img splash-img" onerror="this.style.display='none'"/>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">
+        <img src="assets/logo.png" alt="AA Logo" class="logo-img" onerror="this.style.display='none'" />
+        <span class="logo-text">dullah</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <canvas id="grid-canvas"></canvas>
+    <div class="hero-content">
+      <span class="hero-tag mono">// Sri Lanka · SLIIT · Year 1</span>
+      <h1 class="hero-name">Abdullah<br /><span class="name-accent">Alhar</span></h1>
+      <p class="hero-role">Developer &amp; Builder</p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+        <a href="https://github.com/Abdullah-alhar" target="_blank" class="btn btn-ghost">GitHub ↗</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span class="mono">scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image-wrap">
+          <div class="image-frame">
+            <!-- Place your photo as assets/profile.jpg -->
+            <img src="assets/profile.jpg" alt="Abdullah Alhar" class="profile-photo"
+              onerror="this.parentElement.classList.add('no-photo')" />
+            <div class="image-placeholder-text mono">profile.jpg</div>
+          </div>
+        </div>
+        <div class="about-text">
+          <span class="section-label mono">01 — about</span>
+          <h2 class="section-title">Who I Am</h2>
+          <p>I started programming before university — not through a course at SLIIT, but through Harvard's CS50 series
+            online. I wanted to understand how things actually work under the hood, not just how to use them.</p>
+          <p>That curiosity hasn't stopped. I now build across multiple domains: IoT hardware systems that interact with
+            the physical world, full-stack web applications, and mobile apps. I'm in Year 1 at SLIIT and already working
+            on real-world projects.</p>
+          <p>I like going deep on fundamentals. The kind of programmer who reads the docs, traces the stack, and
+            understands why — not just what.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section skills">
+    <div class="container">
+      <span class="section-label mono">02 — skills</span>
+      <h2 class="section-title">What I Work With</h2>
+      <div class="skills-grid">
+
+        <div class="skill-category">
+          <h3 class="skill-cat-title mono">Languages</h3>
+          <div class="skill-list">
+            <div class="skill-item"><span class="skill-icon">☕</span> Java</div>
+            <div class="skill-item"><span class="skill-icon">🐍</span> Python</div>
+            <div class="skill-item"><span class="skill-icon">🌐</span> JavaScript</div>
+            <div class="skill-item"><span class="skill-icon">🎯</span> Dart</div>
+            <div class="skill-item"><span class="skill-icon">🔧</span> C (CS50)</div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3 class="skill-cat-title mono">Frameworks</h3>
+          <div class="skill-list">
+            <div class="skill-item"><span class="skill-icon">🍃</span> Spring Boot</div>
+            <div class="skill-item"><span class="skill-icon">⚛️</span> React</div>
+            <div class="skill-item"><span class="skill-icon">🦋</span> Flutter</div>
+            <div class="skill-item"><span class="skill-icon">🌿</span> Thymeleaf</div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3 class="skill-cat-title mono">Platforms & Tools</h3>
+          <div class="skill-list">
+            <div class="skill-item"><span class="skill-icon">🔥</span> Firebase</div>
+            <div class="skill-item"><span class="skill-icon">🗄️</span> MySQL</div>
+            <div class="skill-item"><span class="skill-icon">🤖</span> Arduino</div>
+            <div class="skill-item"><span class="skill-icon">🐙</span> Git & GitHub</div>
+            <div class="skill-item"><span class="skill-icon">🚂</span> Railway</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section projects">
+    <div class="container">
+      <span class="section-label mono">03 — projects</span>
+      <h2 class="section-title">Things I've Built</h2>
+      <div class="projects-grid">
+
+        <div class="project-card featured">
+          <div class="project-header">
+            <span class="project-type mono">IoT System</span>
+            <div class="project-links">
+              <a href="https://github.com/abdullah-alhar/green-house" target="_blank" class="project-link mono" title="GitHub">GitHub →</a>
+            </div>
+          </div>
+          <!-- Place image as assets/greenhouse.jpg -->
+          <div class="project-img-wrap">
+            <img src="assets/greenhouse.png" alt="Greenhouse Automation" onerror="this.style.display='none'" />
+            <div class="project-img-placeholder">
+              <span class="mono">greenhouse.png</span>
+            </div>
+          </div>
+          <h3 class="project-title">Greenhouse Automation System</h3>
+          <p class="project-desc">Arduino Uno–based automation system using a DHT11 sensor and soil moisture sensor to maintain optimal growing conditions. If temperature exceeds 30°C, the cooling fan activates automatically. When soil moisture drops below 400, the water pump turns on; once it reaches 700, the pump shuts off — maintaining precise hydration without manual intervention.</p>
+          <div class="tech-tags">
+            <span class="tag">Arduino Uno</span>
+            <span class="tag">DHT11</span>
+            <span class="tag">Soil Sensor</span>
+            <span class="tag">IoT</span>
+            <span class="tag">Automation</span>
+          </div>
+        </div>
+
+        <div class="project-card featured">
+          <div class="project-header">
+            <span class="project-type mono">IoT System</span>
+            <div class="project-links">
+              <a href="https://github.com/abdullah-alhar/smart-home" target="_blank" class="project-link mono" title="GitHub">GitHub →</a>
+            </div>
+          </div>
+          <div class="project-img-wrap">
+            <img src="assets/smart-gate.png" alt="Smart Gate" onerror="this.style.display='none'" />
+            <div class="project-img-placeholder">
+              <span class="mono">smart-gate.png</span>
+            </div>
+          </div>
+          <h3 class="project-title">Smart Gate System</h3>
+          <p class="project-desc">ESP32-based smart gate controller using a 433MHz RF receiver to capture and store the rolling-gate remote's signal in EEPROM memory. Once stored, the gate can be triggered from anywhere in the world via a mobile app — the app sends a command over Wi-Fi to the ESP32 (connected to home network), which replays the 433MHz signal to the RF transmitter, locking or unlocking the gate remotely.</p>
+          <div class="tech-tags">
+            <span class="tag">ESP32</span>
+            <span class="tag">433MHz RF</span>
+            <span class="tag">EEPROM</span>
+            <span class="tag">Wi-Fi</span>
+            <span class="tag">Mobile App</span>
+          </div>
+        </div>
+
+        <div class="project-card featured">
+          <div class="project-header">
+            <span class="project-type mono">Web App</span>
+            <span class="project-badge">OOP Exhibition</span>
+            <div class="project-links">
+              <a href="https://github.com/abdullah-alhar/student-registration" target="_blank" class="project-link mono" title="GitHub">GitHub →</a>
+            </div>
+          </div>
+          <div class="project-img-wrap">
+            <img src="assets/course-reg.png" alt="Course Registration" onerror="this.style.display='none'" />
+            <div class="project-img-placeholder">
+              <span class="mono">course-reg.png</span>
+            </div>
+          </div>
+          <h3 class="project-title">Student Course Registration System</h3>
+          <p class="project-desc">A full-stack MVC web application built with Java &amp; Spring Boot for a university OOP module exhibition. Supports three user roles — Admin, Student, and Lecturer — each with a dedicated dashboard. Features include course creation and enrollment, room &amp; schedule management, and a payment slip upload system. Uses a custom file-based storage layer (no external database) with full CRUD operations implemented in pure OOP design principles.</p>
+          <div class="tech-tags">
+            <span class="tag">Java</span>
+            <span class="tag">Spring Boot</span>
+            <span class="tag">Thymeleaf</span>
+            <span class="tag">MVC</span>
+            <span class="tag">OOP</span>
+            <span class="tag">File Storage</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="section education">
+    <div class="container">
+      <span class="section-label mono">04 — education</span>
+      <h2 class="section-title">Where I've Learned</h2>
+      <div class="edu-list">
+
+        <div class="edu-item">
+          <div class="edu-line"></div>
+          <div class="edu-content">
+            <span class="edu-year mono">2025 — present</span>
+            <h3 class="edu-title">BSc Information Technology</h3>
+            <span class="edu-place">Sri Lanka Institute of Information Technology (SLIIT)</span>
+            <p class="edu-note">Semester 1 GPA: 3.75 · Dean's List target</p>
+          </div>
+        </div>
+
+        <div class="edu-item">
+          <div class="edu-line"></div>
+          <div class="edu-content">
+            <span class="edu-year mono">2024</span>
+            <h3 class="edu-title">CS50x — Introduction to Computer Science</h3>
+            <span class="edu-place">Harvard University (online)</span>
+            <p class="edu-note">C, Python, SQL, JavaScript, web development fundamentals</p>
+          </div>
+        </div>
+
+        <div class="edu-item">
+          <div class="edu-line"></div>
+          <div class="edu-content">
+            <span class="edu-year mono">2024</span>
+            <h3 class="edu-title">CS50P — Introduction to Programming with Python</h3>
+            <span class="edu-place">Harvard University (online)</span>
+            <p class="edu-note">Python, OOP, file I/O, testing, libraries</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <span class="section-label mono">05 — contact</span>
+      <h2 class="section-title">Get In Touch</h2>
+      <p class="contact-intro">I'm open to internships, collaborations, or just a conversation about tech. Reach me directly at <a href="mailto:abdullahbinalhar@gmail.com" class="contact-email">abdullahbinalhar@gmail.com</a> or drop a message below.</p>
+      <form class="contact-form" id="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name" class="mono">name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label for="email" class="mono">email</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="message" class="mono">message</label>
+          <textarea id="message" name="message" rows="5" placeholder="What's on your mind?" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" id="submit-btn">Send Message</button>
+        <p class="form-status mono" id="form-status"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+      <span class="mono footer-name">Abdullah Alhar</span>
+      <p class="footer-copy mono">Developer &amp; Builder · 2025</p>
+      <div class="footer-links">
+        <a href="https://github.com/Abdullah-alhar" target="_blank">GitHub</a>
+        <a href="https://www.instagram.com/abdullah__alhar/" target="_blank">Instagram</a>
+        <a href="mailto:abdullahbinalhar@gmail.com">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
