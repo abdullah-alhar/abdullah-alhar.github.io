@@ -2,4 +2,3 @@ User-agent: *
 Allow: /
 
 Sitemap: https://abdullah-alhar.github.io/sitemap.xml
-Sitemap: https://abdullah-alhar.github.io/sitemap.txt
