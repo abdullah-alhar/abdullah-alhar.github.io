@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://abdullah-alhar.github.io/sitemap.xml
