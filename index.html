@@ -58,12 +58,19 @@
   <link rel="shortcut icon" type="image/png" href="assets/s_logo.png" />
   <link rel="apple-touch-icon" href="assets/s_logo.png" />
 
-  <!-- Fonts -->
+  <!-- Fonts — loaded non-blocking to eliminate render-blocking resource -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Great+Vibes&family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" />
   <link
     href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Great+Vibes&family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap"
-    rel="stylesheet" />
+    rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Great+Vibes&family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet" />
+  </noscript>
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -73,7 +80,7 @@
   <div class="pre">
     <div class="pre-content">
       <img src="assets/s_logo.png" alt="Abdullah Logo" class="logo-img splash-img"
-        onerror="this.style.display='none'" />
+        width="80" height="80" onerror="this.style.display='none'" />
     </div>
   </div>
 
@@ -81,7 +88,8 @@
   <nav id="navbar">
     <div class="nav-inner">
       <a href="#home" class="nav-logo">
-        <img src="assets/logo.png" alt="Abdullah Logo" class="logo-img" onerror="this.style.display='none'" />
+        <img src="assets/logo.png" alt="Abdullah Logo" class="logo-img"
+          width="40" height="33" onerror="this.style.display='none'" />
         <span class="logo-text">dullah</span>
       </a>
       <button class="hamburger" id="hamburger" aria-label="Menu">
@@ -122,8 +130,8 @@
       <div class="about-grid">
         <div class="about-image-wrap">
           <div class="image-frame">
-            <!-- Place your photo as assets/profile.jpg -->
             <img src="assets/profile.jpg" alt="Abdullah Alhar" class="profile-photo"
+              width="600" height="600" fetchpriority="high"
               onerror="this.parentElement.classList.add('no-photo')" />
             <div class="image-placeholder-text mono">profile.jpg</div>
           </div>
@@ -201,11 +209,15 @@
                 title="GitHub">GitHub →</a>
             </div>
           </div>
-          <!-- Place image as assets/greenhouse.jpg -->
           <div class="project-img-wrap">
-            <img src="assets/greenhouse.png" alt="Greenhouse Automation" onerror="this.style.display='none'" />
+            <picture>
+              <source srcset="assets/greenhouse.jpg" type="image/jpeg" />
+              <img src="assets/greenhouse.jpg" alt="Greenhouse Automation"
+                width="800" height="600" loading="lazy"
+                onerror="this.style.display='none'" />
+            </picture>
             <div class="project-img-placeholder">
-              <span class="mono">greenhouse.png</span>
+              <span class="mono">greenhouse</span>
             </div>
           </div>
           <h3 class="project-title">Greenhouse Automation System</h3>
@@ -231,9 +243,14 @@
             </div>
           </div>
           <div class="project-img-wrap">
-            <img src="assets/smart-gate.png" alt="Smart Gate" onerror="this.style.display='none'" />
+            <picture>
+              <source srcset="assets/smart-gate.jpg" type="image/jpeg" />
+              <img src="assets/smart-gate.jpg" alt="Smart Gate"
+                width="800" height="600" loading="lazy"
+                onerror="this.style.display='none'" />
+            </picture>
             <div class="project-img-placeholder">
-              <span class="mono">smart-gate.png</span>
+              <span class="mono">smart-gate</span>
             </div>
           </div>
           <h3 class="project-title">Smart Gate System</h3>
@@ -260,9 +277,14 @@
             </div>
           </div>
           <div class="project-img-wrap">
-            <img src="assets/course-reg.png" alt="Course Registration" onerror="this.style.display='none'" />
+            <picture>
+              <source srcset="assets/course-reg.jpg" type="image/jpeg" />
+              <img src="assets/course-reg.jpg" alt="Course Registration"
+                width="768" height="512" loading="lazy"
+                onerror="this.style.display='none'" />
+            </picture>
             <div class="project-img-placeholder">
-              <span class="mono">course-reg.png</span>
+              <span class="mono">course-reg</span>
             </div>
           </div>
           <h3 class="project-title">Student Course Registration System</h3>
