@@ -32,24 +32,30 @@
     content="Abdullah Alhar — Developer and Builder based in Sri Lanka. BSc IT student at SLIIT." />
   <meta name="twitter:image" content="https://abdullah-alhar.github.io/assets/profile.jpg" />
 
-  <!-- JSON-LD Structured Data (Person schema) -->
+  <!-- JSON-LD Structured Data (ProfilePage + Person schema) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Abdullah Alhar",
+    "@type": "ProfilePage",
     "url": "https://abdullah-alhar.github.io/",
-    "image": "https://abdullah-alhar.github.io/assets/profile.jpg",
-    "sameAs": [
-      "https://github.com/Abdullah-alhar",
-      "https://www.instagram.com/abdullah__alhar/"
-    ],
-    "jobTitle": "Developer",
-    "alumniOf": {
-      "@type": "CollegeOrUniversity",
-      "name": "Sri Lanka Institute of Information Technology (SLIIT)"
-    },
-    "knowsAbout": ["IoT", "Full-Stack Web Development", "Mobile App Development", "Java", "Python", "Flutter", "React", "Spring Boot"],
+    "mainEntity": {
+      "@type": "Person",
+      "@id": "https://abdullah-alhar.github.io/#person",
+      "name": "Abdullah Alhar",
+      "url": "https://abdullah-alhar.github.io/",
+      "image": "https://abdullah-alhar.github.io/assets/profile.jpg",
+      "description": "Developer and builder based in Sri Lanka. BSc IT student at SLIIT specialising in Data Science. Builds across IoT, full-stack web, and mobile apps.",
+      "jobTitle": "Developer",
+      "sameAs": [
+        "https://github.com/Abdullah-alhar",
+        "https://www.instagram.com/abdullah__alhar/"
+      ],
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Sri Lanka Institute of Information Technology (SLIIT)"
+      },
+      "knowsAbout": ["IoT", "Full-Stack Web Development", "Mobile App Development", "Java", "Python", "Flutter", "React", "Spring Boot"]
+    }
   }
   </script>
 
