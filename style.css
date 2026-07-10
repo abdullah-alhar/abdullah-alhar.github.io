@@ -412,7 +412,7 @@ img {
   border-radius: var(--radius);
   overflow: hidden;
   background: var(--bg);
-  aspect-ratio: 3/4;
+  aspect-ratio: 1/1;
   max-height: 420px;
 }
 
@@ -945,7 +945,7 @@ footer {
 
   .image-frame {
     max-height: 280px;
-    aspect-ratio: 4/3;
+    aspect-ratio: 1/1;
   }
 
   .skills-grid {
