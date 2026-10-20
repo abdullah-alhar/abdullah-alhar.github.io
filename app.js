@@ -2,6 +2,33 @@
 // to add a new one just copy one of these and change the details
 const projects = [
   {
+    title: 'SmartNest Apartment Sales System',
+    type: 'Web App',
+    category: 'web',
+    image: 'assets/smartnest.jpg',
+    github: 'https://github.com/abdullah-alhar/smartnest-apartment-system',
+    desc: 'A full-stack web app that moves an apartment sales company online, from the first customer inquiry to the final reservation. Customers browse listings, book site visits and reserve apartments with a payment proof, while staff (Sales, CRO, Operations Manager, Admin) each get their own dashboard. I built the Promotion Management module end to end: staff create offers, the system validates discounts and dates, and the Operations Manager approves or rejects them before customers see them. Also worked on the EER design and SQL Server database.',
+    tags: ['React', 'Spring Boot', 'Java 21', 'Spring Security', 'JWT', 'SQL Server', 'Tailwind']
+  },
+  {
+    title: 'Malaria Cell Image Classifier',
+    type: 'AI / ML',
+    category: 'ai',
+    image: 'assets/malaria.jpg',
+    desc: 'A CNN built from scratch that classifies microscope images of blood cells as infected or healthy, using the NIH malaria dataset (27,558 images from 200 patients). The data is split by patient, not by image, so cells from the same person never appear in both training and testing. The CNN reached 94.2% test accuracy (0.975 ROC-AUC) and was compared against SVM, Random Forest and Logistic Regression trained on hand-made features, with k-fold cross-validation and a focus on recall.',
+    tags: ['Python', 'TensorFlow', 'Keras', 'scikit-learn', 'OpenCV', 'CNN']
+  },
+  {
+    title: 'Student Course Registration System',
+    type: 'Web App',
+    badge: 'OOP Concepts',
+    category: 'web',
+    image: 'assets/course-reg.jpg',
+    github: 'https://github.com/abdullah-alhar/student-registration',
+    desc: 'A full-stack MVC web application built with Java & Spring Boot for a university OOP module exhibition. Supports three user roles (Admin, Student and Lecturer), each with a dedicated dashboard. Features include course creation and enrollment, room & schedule management, and a payment slip upload system. Uses a custom file-based storage layer (no external database) with full CRUD operations implemented in pure OOP design principles.',
+    tags: ['Java', 'Spring Boot', 'Thymeleaf', 'MVC', 'OOP', 'File Storage']
+  },
+  {
     title: 'Greenhouse Automation System',
     type: 'IoT System',
     category: 'iot',
@@ -18,16 +45,6 @@ const projects = [
     github: 'https://github.com/abdullah-alhar/smart-home',
     desc: "ESP32-based smart gate controller using a 433MHz RF receiver to capture and store the rolling-gate remote's signal in EEPROM memory. Once stored, the gate can be triggered from anywhere in the world via a mobile app. The app sends a command over Wi-Fi to the ESP32 (connected to home network), which replays the 433MHz signal to the RF transmitter, locking or unlocking the gate remotely.",
     tags: ['ESP32', '433MHz RF', 'EEPROM', 'Wi-Fi', 'Mobile App']
-  },
-  {
-    title: 'Student Course Registration System',
-    type: 'Web App',
-    badge: 'OOP Concepts',
-    category: 'web',
-    image: 'assets/course-reg.jpg',
-    github: 'https://github.com/abdullah-alhar/student-registration',
-    desc: 'A full-stack MVC web application built with Java & Spring Boot for a university OOP module exhibition. Supports three user roles (Admin, Student and Lecturer), each with a dedicated dashboard. Features include course creation and enrollment, room & schedule management, and a payment slip upload system. Uses a custom file-based storage layer (no external database) with full CRUD operations implemented in pure OOP design principles.',
-    tags: ['Java', 'Spring Boot', 'Thymeleaf', 'MVC', 'OOP', 'File Storage']
   }
 ];
 
@@ -46,15 +63,15 @@ projects.forEach(project => {
   card.innerHTML = `
     <div class="project-img">
       <img src="${project.image}" alt="${project.title}" loading="lazy">
-      <div class="project-overlay">
+      ${project.github ? `<div class="project-overlay">
         <a href="${project.github}" target="_blank"><i class="fa-brands fa-github"></i> View Code</a>
-      </div>
+      </div>` : ''}
     </div>
     <div class="project-body">
       <div class="project-top">
         <span class="project-type">${project.type}</span>
         ${project.badge ? `<span class="project-badge">${project.badge}</span>` : ''}
-        <a href="${project.github}" target="_blank" class="project-git" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        ${project.github ? `<a href="${project.github}" target="_blank" class="project-git" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>` : ''}
       </div>
       <h3>${project.title}</h3>
       <p>${project.desc}</p>
@@ -65,33 +82,62 @@ projects.forEach(project => {
   projectsGrid.appendChild(card);
 });
 
-// filter buttons (all / iot / web)
+// filter buttons (all / web / ai / iot)
+// iot projects stay hidden under "All" until "show more" is clicked
 const filterBtns = document.querySelectorAll('.filter-btn');
+const moreBtn = document.getElementById('more-projects');
+let filter = 'all';
+let showMore = false;
+
+function showProjects() {
+  const cards = document.querySelectorAll('.project-card');
+  const shown = [];
+
+  cards.forEach(card => {
+    const category = card.dataset.category;
+    const visible = filter === 'all' ? (showMore || category !== 'iot') : category === filter;
+    if (visible) {
+      if (card.classList.contains('hidden')) shown.push(card);
+      card.classList.remove('hidden');
+    } else {
+      card.classList.add('hidden');
+    }
+  });
+
+  moreBtn.classList.toggle('hidden', filter !== 'all');
+  moreBtn.innerHTML = showMore
+    ? 'Show less <i class="fa-solid fa-arrow-up"></i>'
+    : 'Show more projects <i class="fa-solid fa-arrow-down"></i>';
+
+  return shown;
+}
+
+function animateIn(cards) {
+  if (window.gsap) {
+    gsap.fromTo(cards, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.5, stagger: 0.1, overwrite: true, clearProps: 'transform' });
+    ScrollTrigger.refresh();
+  }
+}
 
 filterBtns.forEach(btn => {
   btn.addEventListener('click', () => {
     filterBtns.forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
 
-    const filter = btn.dataset.filter;
-    const cards = document.querySelectorAll('.project-card');
-    const shown = [];
-
-    cards.forEach(card => {
-      if (filter === 'all' || card.dataset.category === filter) {
-        card.classList.remove('hidden');
-        shown.push(card);
-      } else {
-        card.classList.add('hidden');
-      }
-    });
-
-    if (window.gsap) {
-      gsap.fromTo(shown, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.5, stagger: 0.1, overwrite: true });
-      ScrollTrigger.refresh();
-    }
+    filter = btn.dataset.filter;
+    showMore = false;
+    showProjects();
+    animateIn([...document.querySelectorAll('.project-card:not(.hidden)')]);
   });
 });
+
+moreBtn.addEventListener('click', () => {
+  showMore = !showMore;
+  animateIn(showProjects());
+  if (!showMore) document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
+});
+
+showProjects();
 
 // certificates
 const certificates = [
@@ -361,7 +407,8 @@ if (window.gsap) {
     opacity: 0,
     duration: 0.7,
     stagger: 0.15,
-    ease: 'power2.out'
+    ease: 'power2.out',
+    clearProps: 'transform'
   });
 }
 

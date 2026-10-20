@@ -626,6 +626,7 @@ button {
 /* ---------- projects ---------- */
 .filter-btns {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.8rem;
   margin-bottom: 2.5rem;
 }
@@ -637,6 +638,7 @@ button {
   background: transparent;
   color: var(--text-muted);
   font-size: 0.9rem;
+  white-space: nowrap;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -678,9 +680,19 @@ button {
   display: none;
 }
 
+.more-projects {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+
+.more-projects .btn.hidden {
+  display: none;
+}
+
 .project-img {
   position: relative;
-  height: 200px;
+  aspect-ratio: 16 / 10;
   overflow: hidden;
 }
 
@@ -1353,45 +1365,6 @@ footer {
 
 /* ---------- tablet ---------- */
 @media (max-width: 950px) {
-  .hero-name {
-    font-size: 4.2rem;
-  }
-
-  .hero-role {
-    font-size: 1.35rem;
-  }
-
-  .about-grid,
-  .skills-wrap,
-  .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-
-  .about-photo {
-    display: flex;
-    justify-content: center;
-  }
-
-  .photo-frame {
-    width: 300px;
-  }
-
-  .photo-frame img {
-    height: 340px;
-  }
-
-  .skills-left {
-    position: static;
-  }
-
-  .cert-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-/* ---------- mobile ---------- */
-@media (max-width: 768px) {
   .hamburger {
     display: block;
   }
@@ -1427,6 +1400,50 @@ footer {
     z-index: 2;
   }
 
+  .hero-name {
+    font-size: 4.2rem;
+  }
+
+  .hero-role {
+    font-size: 1.35rem;
+  }
+
+  .about-grid,
+  .skills-wrap,
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .about-photo {
+    display: flex;
+    justify-content: center;
+  }
+
+  .photo-frame {
+    width: 300px;
+  }
+
+  .photo-frame img {
+    height: 340px;
+  }
+
+  .skills-left {
+    position: static;
+  }
+
+  .cert-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cert-img {
+    height: auto;
+    aspect-ratio: 1400 / 990;
+  }
+}
+
+/* ---------- mobile ---------- */
+@media (max-width: 768px) {
   .section {
     padding: 5rem 0;
   }
@@ -1503,5 +1520,20 @@ footer {
 
   .skill-cards {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .filter-btns {
+    gap: 0.5rem;
+  }
+
+  .filter-btn {
+    padding: 0.45rem 1rem;
+  }
+}
+
+/* phones turned sideways */
+@media (max-height: 500px) and (orientation: landscape) {
+  .scroll-down {
+    display: none;
   }
 }
