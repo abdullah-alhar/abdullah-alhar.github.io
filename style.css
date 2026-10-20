@@ -1422,6 +1422,8 @@ footer {
 
   .photo-frame {
     width: 300px;
+    /* leave room for the border box that sits 18px to the right */
+    max-width: calc(100% - 18px);
   }
 
   .photo-frame img {
