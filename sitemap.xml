@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://abdullah-alhar.github.io/</loc>
-    <lastmod>2026-10-17</lastmod>
+    <lastmod>2026-10-22</lastmod>
+    <image:image><image:loc>https://abdullah-alhar.github.io/assets/profile.jpg</image:loc></image:image>
+    <image:image><image:loc>https://abdullah-alhar.github.io/assets/smartnest.jpg</image:loc></image:image>
+    <image:image><image:loc>https://abdullah-alhar.github.io/assets/malaria.jpg</image:loc></image:image>
+    <image:image><image:loc>https://abdullah-alhar.github.io/assets/course-reg.jpg</image:loc></image:image>
+    <image:image><image:loc>https://abdullah-alhar.github.io/assets/greenhouse.jpg</image:loc></image:image>
+    <image:image><image:loc>https://abdullah-alhar.github.io/assets/smart-gate.jpg</image:loc></image:image>
   </url>
 </urlset>

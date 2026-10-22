@@ -6,37 +6,79 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="google-site-verification" content="gwh9Gqta7kUiDh3vOW7oqmTr35GXXeMxLb7vNaq9VOg" />
 
-  <title>Abdullah Alhar | BSc IT Specialising in AI</title>
+  <title>Abdullah Alhar | AI &amp; IT Student Portfolio – SLIIT</title>
   <meta name="description"
-    content="Abdullah Alhar, BSc in Information Technology student at SLIIT specialising in Artificial Intelligence. Projects in web, mobile and AI." />
+    content="Portfolio of Abdullah Alhar, a BSc IT student at SLIIT, Sri Lanka, specialising in AI. Web apps, machine learning and IoT projects. Open to internships." />
   <meta name="author" content="Abdullah Alhar" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="theme-color" content="#0A0F1E" />
   <link rel="canonical" href="https://abdullah-alhar.github.io/" />
 
   <!-- for link previews (linkedin, whatsapp etc) -->
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content="profile" />
+  <meta property="og:site_name" content="Abdullah Alhar" />
+  <meta property="og:locale" content="en_US" />
   <meta property="og:url" content="https://abdullah-alhar.github.io/" />
-  <meta property="og:title" content="Abdullah Alhar | BSc IT Specialising in AI" />
+  <meta property="og:title" content="Abdullah Alhar | AI &amp; IT Student Portfolio" />
   <meta property="og:description"
-    content="BSc in Information Technology Specialising in Artificial Intelligence at SLIIT. Projects in web, mobile and AI." />
+    content="BSc IT student at SLIIT specialising in Artificial Intelligence. Web apps, machine learning and IoT projects." />
   <meta property="og:image" content="https://abdullah-alhar.github.io/assets/profile.jpg" />
+  <meta property="og:image:width" content="600" />
+  <meta property="og:image:height" content="600" />
+  <meta property="og:image:alt" content="Photo of Abdullah Alhar" />
+  <meta property="profile:first_name" content="Abdullah" />
+  <meta property="profile:last_name" content="Alhar" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Abdullah Alhar | AI &amp; IT Student Portfolio" />
+  <meta name="twitter:description"
+    content="BSc IT student at SLIIT specialising in Artificial Intelligence. Web apps, machine learning and IoT projects." />
+  <meta name="twitter:image" content="https://abdullah-alhar.github.io/assets/profile.jpg" />
 
   <!-- google info -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Abdullah Alhar",
-    "url": "https://abdullah-alhar.github.io/",
-    "image": "https://abdullah-alhar.github.io/assets/profile.jpg",
-    "jobTitle": "BSc in Information Technology Specialising in Artificial Intelligence",
-    "affiliation": {
-      "@type": "CollegeOrUniversity",
-      "name": "Sri Lanka Institute of Information Technology (SLIIT)"
-    },
-    "sameAs": [
-      "https://github.com/Abdullah-alhar",
-      "https://www.instagram.com/abdullah__alhar/",
-      "https://www.linkedin.com/in/abdullah-alhar/"
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://abdullah-alhar.github.io/#website",
+        "url": "https://abdullah-alhar.github.io/",
+        "name": "Abdullah Alhar",
+        "inLanguage": "en",
+        "publisher": { "@id": "https://abdullah-alhar.github.io/#person" }
+      },
+      {
+        "@type": "ProfilePage",
+        "@id": "https://abdullah-alhar.github.io/#profile",
+        "url": "https://abdullah-alhar.github.io/",
+        "name": "Abdullah Alhar | AI & IT Student Portfolio",
+        "isPartOf": { "@id": "https://abdullah-alhar.github.io/#website" },
+        "mainEntity": { "@id": "https://abdullah-alhar.github.io/#person" }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://abdullah-alhar.github.io/#person",
+        "name": "Abdullah Alhar",
+        "givenName": "Abdullah",
+        "familyName": "Alhar",
+        "url": "https://abdullah-alhar.github.io/",
+        "image": "https://abdullah-alhar.github.io/assets/profile.jpg",
+        "description": "BSc in Information Technology student at SLIIT, Sri Lanka, specialising in Artificial Intelligence. Builds web apps, machine learning models and IoT projects.",
+        "jobTitle": "BSc in Information Technology Specialising in Artificial Intelligence",
+        "affiliation": {
+          "@type": "CollegeOrUniversity",
+          "name": "Sri Lanka Institute of Information Technology (SLIIT)",
+          "url": "https://www.sliit.lk/"
+        },
+        "address": { "@type": "PostalAddress", "addressCountry": "LK" },
+        "memberOf": { "@type": "Organization", "name": "IEEE" },
+        "knowsAbout": ["Artificial Intelligence", "Machine Learning", "Web Development", "Java", "Spring Boot", "React", "Python", "Flutter", "IoT", "Arduino", "ESP32"],
+        "sameAs": [
+          "https://github.com/Abdullah-alhar",
+          "https://www.instagram.com/abdullah__alhar/",
+          "https://www.linkedin.com/in/abdullah-alhar/"
+        ]
+      }
     ]
   }
   </script>
@@ -61,8 +103,8 @@
   <!-- splash screen -->
   <div class="pre">
     <div class="pre-content">
-      <img src="assets/logo.png" alt="Logo" class="splash-img" />
-      <p class="splash-name">Abdullah Alhar</p>
+      <img src="assets/logo.png" alt="" class="splash-img" width="600" height="492" />
+      <p class="splash-name" aria-hidden="true">Abdullah Alhar</p>
     </div>
   </div>
 
@@ -70,10 +112,11 @@
   <div class="progress-bar" id="progress-bar"></div>
 
   <!-- navbar -->
-  <nav id="navbar">
+  <header>
+  <nav id="navbar" aria-label="Main">
     <div class="nav-inner">
-      <a href="#home" class="nav-logo">
-        <img src="assets/logo.png" alt="Logo" class="logo-img" />
+      <a href="#home" class="nav-logo" aria-label="Abdullah Alhar - home">
+        <img src="assets/logo.png" alt="Abdullah Alhar logo" class="logo-img" width="600" height="492" />
         <span class="logo-text">dullah</span>
       </a>
 
@@ -87,12 +130,15 @@
       </ul>
 
       <div class="nav-right">
-        <button class="hamburger" id="hamburger" aria-label="Menu">
+        <button class="hamburger" id="hamburger" aria-label="Menu" aria-controls="nav-links">
           <i class="fa-solid fa-bars"></i>
         </button>
       </div>
     </div>
   </nav>
+  </header>
+
+  <main>
 
   <!-- home -->
   <section id="home" class="hero">
@@ -110,11 +156,11 @@
       </div>
 
       <div class="hero-socials intro">
-        <a href="https://github.com/Abdullah-alhar" target="_blank" aria-label="GitHub"><i
+        <a href="https://github.com/Abdullah-alhar" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i
             class="fa-brands fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/abdullah-alhar/" target="_blank" aria-label="LinkedIn"><i
+        <a href="https://www.linkedin.com/in/abdullah-alhar/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i
             class="fa-brands fa-linkedin-in"></i></a>
-        <a href="https://www.instagram.com/abdullah__alhar/" target="_blank" aria-label="Instagram"><i
+        <a href="https://www.instagram.com/abdullah__alhar/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i
             class="fa-brands fa-instagram"></i></a>
       </div>
     </div>
@@ -132,7 +178,7 @@
       <div class="about-grid">
         <div class="about-photo anim-left">
           <div class="photo-frame">
-            <img src="assets/profile.jpg" alt="Abdullah Alhar" />
+            <img src="assets/profile.jpg" alt="Photo of Abdullah Alhar" width="600" height="600" loading="lazy" decoding="async" />
           </div>
         </div>
 
@@ -241,7 +287,7 @@
     </div>
   </section>
 
-  <!-- projects (cards are made in app.js) -->
+  <!-- projects -->
   <section id="projects" class="section section-alt">
     <div class="container">
       <h2 class="section-title anim">Things I've <span>Built</span></h2>
@@ -253,7 +299,91 @@
         <button class="filter-btn" data-filter="iot">IoT</button>
       </div>
 
-      <div class="projects-grid" id="projects-grid"></div>
+      <!-- to add a project, copy one <article> card below and change the details -->
+      <div class="projects-grid" id="projects-grid">
+        <article class="project-card" data-category="web">
+          <div class="project-img">
+            <img src="assets/smartnest.jpg" alt="SmartNest Apartment Sales System screenshot" width="1200" height="750" loading="lazy" decoding="async">
+            <div class="project-overlay">
+              <a href="https://github.com/abdullah-alhar/smartnest-apartment-system" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> View Code</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-top">
+              <span class="project-type">Web App</span>
+              <a href="https://github.com/abdullah-alhar/smartnest-apartment-system" target="_blank" rel="noopener noreferrer" class="project-git" aria-label="SmartNest Apartment Sales System on GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <h3>SmartNest Apartment Sales System</h3>
+            <p>A full-stack web app that moves an apartment sales company online, from the first customer inquiry to the final reservation. Customers browse listings, book site visits and reserve apartments with a payment proof, while staff (Sales, CRO, Operations Manager, Admin) each get their own dashboard. I built the Promotion Management module end to end: staff create offers, the system validates discounts and dates, and the Operations Manager approves or rejects them before customers see them. Also worked on the EER design and SQL Server database.</p>
+            <div class="tech-tags"><span class="tag">React</span><span class="tag">Spring Boot</span><span class="tag">Java 21</span><span class="tag">Spring Security</span><span class="tag">JWT</span><span class="tag">SQL Server</span><span class="tag">Tailwind</span></div>
+          </div>
+        </article>
+        <article class="project-card" data-category="ai">
+          <div class="project-img">
+            <img src="assets/malaria.jpg" alt="Malaria Cell Image Classifier screenshot" width="1200" height="750" loading="lazy" decoding="async">
+          </div>
+          <div class="project-body">
+            <div class="project-top">
+              <span class="project-type">AI / ML</span>
+            </div>
+            <h3>Malaria Cell Image Classifier</h3>
+            <p>A CNN built from scratch that classifies microscope images of blood cells as infected or healthy, using the NIH malaria dataset (27,558 images from 200 patients). The data is split by patient, not by image, so cells from the same person never appear in both training and testing. The CNN reached 94.2% test accuracy (0.975 ROC-AUC) and was compared against SVM, Random Forest and Logistic Regression trained on hand-made features, with k-fold cross-validation and a focus on recall.</p>
+            <div class="tech-tags"><span class="tag">Python</span><span class="tag">TensorFlow</span><span class="tag">Keras</span><span class="tag">scikit-learn</span><span class="tag">OpenCV</span><span class="tag">CNN</span></div>
+          </div>
+        </article>
+        <article class="project-card" data-category="web">
+          <div class="project-img">
+            <img src="assets/course-reg.jpg" alt="Student Course Registration System screenshot" width="768" height="512" loading="lazy" decoding="async">
+            <div class="project-overlay">
+              <a href="https://github.com/abdullah-alhar/student-registration" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> View Code</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-top">
+              <span class="project-type">Web App</span>
+              <span class="project-badge">OOP Concepts</span>
+              <a href="https://github.com/abdullah-alhar/student-registration" target="_blank" rel="noopener noreferrer" class="project-git" aria-label="Student Course Registration System on GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <h3>Student Course Registration System</h3>
+            <p>A full-stack MVC web application built with Java &amp; Spring Boot for a university OOP module exhibition. Supports three user roles (Admin, Student and Lecturer), each with a dedicated dashboard. Features include course creation and enrollment, room &amp; schedule management, and a payment slip upload system. Uses a custom file-based storage layer (no external database) with full CRUD operations implemented in pure OOP design principles.</p>
+            <div class="tech-tags"><span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">Thymeleaf</span><span class="tag">MVC</span><span class="tag">OOP</span><span class="tag">File Storage</span></div>
+          </div>
+        </article>
+        <article class="project-card" data-category="iot">
+          <div class="project-img">
+            <img src="assets/greenhouse.jpg" alt="Greenhouse Automation System screenshot" width="800" height="600" loading="lazy" decoding="async">
+            <div class="project-overlay">
+              <a href="https://github.com/abdullah-alhar/green-house" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> View Code</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-top">
+              <span class="project-type">IoT System</span>
+              <a href="https://github.com/abdullah-alhar/green-house" target="_blank" rel="noopener noreferrer" class="project-git" aria-label="Greenhouse Automation System on GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <h3>Greenhouse Automation System</h3>
+            <p>Arduino Uno based automation system using a DHT11 sensor and soil moisture sensor to maintain optimal growing conditions. If temperature exceeds 30°C, the cooling fan activates automatically. When soil moisture drops below 400, the water pump turns on; once it reaches 700, the pump shuts off, maintaining precise hydration without manual intervention.</p>
+            <div class="tech-tags"><span class="tag">Arduino Uno</span><span class="tag">DHT11</span><span class="tag">Soil Sensor</span><span class="tag">IoT</span><span class="tag">Automation</span></div>
+          </div>
+        </article>
+        <article class="project-card" data-category="iot">
+          <div class="project-img">
+            <img src="assets/smart-gate.jpg" alt="Smart Gate System screenshot" width="800" height="600" loading="lazy" decoding="async">
+            <div class="project-overlay">
+              <a href="https://github.com/abdullah-alhar/smart-home" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> View Code</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-top">
+              <span class="project-type">IoT System</span>
+              <a href="https://github.com/abdullah-alhar/smart-home" target="_blank" rel="noopener noreferrer" class="project-git" aria-label="Smart Gate System on GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <h3>Smart Gate System</h3>
+            <p>ESP32-based smart gate controller using a 433MHz RF receiver to capture and store the rolling-gate remote's signal in EEPROM memory. Once stored, the gate can be triggered from anywhere in the world via a mobile app. The app sends a command over Wi-Fi to the ESP32 (connected to home network), which replays the 433MHz signal to the RF transmitter, locking or unlocking the gate remotely.</p>
+            <div class="tech-tags"><span class="tag">ESP32</span><span class="tag">433MHz RF</span><span class="tag">EEPROM</span><span class="tag">Wi-Fi</span><span class="tag">Mobile App</span></div>
+          </div>
+        </article>
+      </div>
 
       <div class="more-projects">
         <button class="btn btn-ghost" id="more-projects"></button>
@@ -285,8 +415,64 @@
       </div>
 
       <h3 class="sub-title anim">Awards &amp; Certificates</h3>
-      <!-- cards are made in app.js -->
-      <div class="cert-grid" id="cert-grid"></div>
+      <!-- to add a certificate, copy one card below and change the details -->
+      <div class="cert-grid" id="cert-grid">
+        <div class="cert-card anim winner">
+          <div class="cert-img" data-lightbox="assets/certificates/code-night.jpg" data-caption="Code Night - N3:GO Excellence Award">
+            <span class="winner-badge"><i class="fa-solid fa-trophy"></i> Winner</span>
+            <img src="assets/certificates/code-night.jpg" alt="Code Night - N3:GO Excellence Award certificate" width="1400" height="990" loading="lazy" decoding="async">
+            <span class="zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+          </div>
+          <div class="cert-body">
+            <h4>Code Night - N3:GO Excellence Award</h4>
+            <p class="cert-issuer">SLIIT Mozilla Campus Club</p>
+            <div class="cert-bottom">
+              <span class="cert-date"><i class="fa-regular fa-calendar"></i>Aug 2026</span>
+            </div>
+          </div>
+        </div>
+        <div class="cert-card anim">
+          <div class="cert-img" data-lightbox="assets/certificates/git-github.jpg" data-caption="Git &amp; GitHub 101 Workshop">
+            <img src="assets/certificates/git-github.jpg" alt="Git &amp; GitHub 101 Workshop certificate" width="1400" height="990" loading="lazy" decoding="async">
+            <span class="zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+          </div>
+          <div class="cert-body">
+            <h4>Git &amp; GitHub 101 Workshop</h4>
+            <p class="cert-issuer">Software Engineering Student Community, SLIIT</p>
+            <div class="cert-bottom">
+              <span class="cert-date"><i class="fa-regular fa-calendar"></i>Feb 2026</span>
+            </div>
+          </div>
+        </div>
+        <div class="cert-card anim">
+          <div class="cert-img" data-lightbox="assets/certificates/python.jpg" data-caption="Python for Beginners">
+            <img src="assets/certificates/python.jpg" alt="Python for Beginners certificate" width="1400" height="990" loading="lazy" decoding="async">
+            <span class="zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+          </div>
+          <div class="cert-body">
+            <h4>Python for Beginners</h4>
+            <p class="cert-issuer">CSE Department, University of Moratuwa (CODL)</p>
+            <div class="cert-bottom">
+              <span class="cert-date"><i class="fa-regular fa-calendar"></i>Jan 2025</span>
+              <a href="https://open.uom.lk/verify" target="_blank" rel="noopener noreferrer" class="cert-verify">Verify <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="cert-card anim">
+          <div class="cert-img" data-lightbox="assets/certificates/web-design.jpg" data-caption="Web Design for Beginners">
+            <img src="assets/certificates/web-design.jpg" alt="Web Design for Beginners certificate" width="1400" height="990" loading="lazy" decoding="async">
+            <span class="zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+          </div>
+          <div class="cert-body">
+            <h4>Web Design for Beginners</h4>
+            <p class="cert-issuer">IT Department, University of Moratuwa (CODL)</p>
+            <div class="cert-bottom">
+              <span class="cert-date"></span>
+              <a href="https://open.uom.lk/verify" target="_blank" rel="noopener noreferrer" class="cert-verify">Verify <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -313,10 +499,10 @@
           </div>
 
           <div class="contact-socials">
-            <a href="https://github.com/Abdullah-alhar" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
-            <a href="https://www.linkedin.com/in/abdullah-alhar/" target="_blank"><i class="fa-brands fa-linkedin"></i>
+            <a href="https://github.com/Abdullah-alhar" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
+            <a href="https://www.linkedin.com/in/abdullah-alhar/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i>
               LinkedIn</a>
-            <a href="https://www.instagram.com/abdullah__alhar/" target="_blank"><i class="fa-brands fa-instagram"></i>
+            <a href="https://www.instagram.com/abdullah__alhar/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i>
               Instagram</a>
           </div>
         </div>
@@ -337,7 +523,7 @@
             <label for="message">Your message</label>
           </div>
           <!-- bots fill this, people cant see it -->
-          <input type="text" id="website" name="website" class="hp" tabindex="-1" autocomplete="off" />
+          <input type="text" id="website" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
           <button type="submit" class="btn btn-primary" id="submit-btn">Send Message <i
               class="fa-solid fa-paper-plane"></i></button>
           <p class="form-status" id="form-status"></p>
@@ -346,16 +532,18 @@
     </div>
   </section>
 
+  </main>
+
   <!-- footer -->
   <footer>
     <div class="container footer-inner">
       <p>Designed &amp; built by <span>Abdullah Alhar</span> &copy; <span id="year">2026</span></p>
       <div class="footer-socials">
-        <a href="https://github.com/Abdullah-alhar" target="_blank" aria-label="GitHub"><i
+        <a href="https://github.com/Abdullah-alhar" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i
             class="fa-brands fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/abdullah-alhar/" target="_blank" aria-label="LinkedIn"><i
+        <a href="https://www.linkedin.com/in/abdullah-alhar/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i
             class="fa-brands fa-linkedin-in"></i></a>
-        <a href="https://www.instagram.com/abdullah__alhar/" target="_blank" aria-label="Instagram"><i
+        <a href="https://www.instagram.com/abdullah__alhar/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i
             class="fa-brands fa-instagram"></i></a>
       </div>
     </div>
