@@ -1,4 +1,11 @@
 User-agent: *
 Allow: /
 
+# keep certificate scans out of search thumbnails / image results
+User-agent: Googlebot-Image
+Disallow: /assets/certificates/
+
+User-agent: Googlebot
+Disallow: /assets/certificates/
+
 Sitemap: https://abdullah-alhar.github.io/sitemap.xml
