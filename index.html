@@ -23,8 +23,9 @@
   <meta property="og:description"
     content="BSc IT student at SLIIT specialising in Artificial Intelligence. Web apps, machine learning and IoT projects." />
   <meta property="og:image" content="https://abdullah-alhar.github.io/assets/profile.jpg" />
-  <meta property="og:image:width" content="600" />
-  <meta property="og:image:height" content="600" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="941" />
+  <meta property="og:image:height" content="1672" />
   <meta property="og:image:alt" content="Photo of Abdullah Alhar" />
   <meta property="profile:first_name" content="Abdullah" />
   <meta property="profile:last_name" content="Alhar" />
@@ -54,7 +55,7 @@
         "url": "https://abdullah-alhar.github.io/",
         "name": "Abdullah Alhar | AI & IT Student Portfolio",
         "isPartOf": { "@id": "https://abdullah-alhar.github.io/#website" },
-        "primaryImageOfPage": { "@type": "ImageObject", "url": "https://abdullah-alhar.github.io/assets/profile.jpg", "width": 600, "height": 600 },
+        "primaryImageOfPage": { "@type": "ImageObject", "url": "https://abdullah-alhar.github.io/assets/profile.jpg", "width": 941, "height": 1672, "caption": "Abdullah Alhar" },
         "image": "https://abdullah-alhar.github.io/assets/profile.jpg",
         "mainEntity": { "@id": "https://abdullah-alhar.github.io/#person" }
       },
@@ -75,7 +76,7 @@
         },
         "address": { "@type": "PostalAddress", "addressCountry": "LK" },
         "memberOf": { "@type": "Organization", "name": "IEEE" },
-        "knowsAbout": ["Artificial Intelligence", "Machine Learning", "Web Development", "Java", "Spring Boot", "React", "Python", "Flutter", "IoT", "Arduino", "ESP32"],
+        "knowsAbout": ["Artificial Intelligence", "Machine Learning", "Deep Learning", "TensorFlow", "Keras", "scikit-learn", "Jupyter", "Google Colab", "Web Development", "Java", "Spring Boot", "React", "Python", "Flutter", "IoT", "Arduino", "ESP32"],
         "sameAs": [
           "https://github.com/Abdullah-alhar",
           "https://www.instagram.com/abdullah__alhar/",
@@ -86,8 +87,9 @@
   }
   </script>
 
-  <link rel="icon" type="image/jpeg" href="/assets/profile.jpg" />
-  <link rel="apple-touch-icon" href="/assets/profile.jpg" />
+  <!-- one favicon for tabs, google search and iphone home screen (square, multiple of 48px) -->
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/favicon.png" />
 
   <!-- fonts + icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -95,9 +97,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/devicon@2.16.0/devicon.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/devicon@2.17.0/devicon.min.css" />
 
-  <link rel="stylesheet" href="style.css?v=2" />
+  <link rel="stylesheet" href="style.css?v=3" />
 
 </head>
 
@@ -106,7 +108,7 @@
   <!-- splash screen -->
   <div class="pre">
     <div class="pre-content">
-      <img src="assets/logo.png" alt="" class="splash-img" width="600" height="492" />
+      <div class="splash-img" aria-hidden="true"></div>
       <p class="splash-name" aria-hidden="true">Abdullah Alhar</p>
     </div>
   </div>
@@ -181,7 +183,7 @@
       <div class="about-grid">
         <div class="about-photo anim-left">
           <div class="photo-frame">
-            <img src="assets/profile.jpg" alt="Photo of Abdullah Alhar" width="600" height="600" decoding="async" />
+            <img src="assets/profile.jpg" alt="Photo of Abdullah Alhar" width="941" height="1672" decoding="async" />
           </div>
         </div>
 
@@ -271,6 +273,17 @@
             <div class="skill-card anim"><i class="devicon-react-original colored"></i><span>React</span></div>
             <div class="skill-card anim"><i class="devicon-flutter-plain colored"></i><span>Flutter</span></div>
             <div class="skill-card anim"><i class="fa-solid fa-leaf thymeleaf"></i><span>Thymeleaf</span></div>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="anim">AI &amp; Machine Learning</h3>
+          <div class="skill-cards">
+            <div class="skill-card anim"><i class="devicon-jupyter-plain colored"></i><span>Jupyter</span></div>
+            <div class="skill-card anim"><i class="devicon-googlecolab-plain colored"></i><span>Google Colab</span></div>
+            <div class="skill-card anim"><i class="devicon-tensorflow-original colored"></i><span>TensorFlow</span></div>
+            <div class="skill-card anim"><i class="devicon-keras-plain colored"></i><span>Keras</span></div>
+            <div class="skill-card anim"><i class="devicon-scikitlearn-plain colored"></i><span>scikit-learn</span></div>
           </div>
         </div>
 

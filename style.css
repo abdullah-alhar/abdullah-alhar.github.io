@@ -103,8 +103,9 @@ button {
 
 .splash-img {
   height: 35vh;
-  width: auto;
   max-width: 75vw;
+  aspect-ratio: 600 / 492;
+  background: url('assets/logo.png') center / contain no-repeat;
 }
 
 .splash-name {
@@ -518,6 +519,7 @@ button {
   left: 18px;
   width: 100%;
   height: 100%;
+  box-sizing: border-box;
   border: 2px solid var(--accent);
   border-radius: 12px;
   z-index: -1;
@@ -530,9 +532,13 @@ button {
 }
 
 .photo-frame img {
+  display: block;
   width: 100%;
-  height: 400px;
+  height: auto;
+  aspect-ratio: 4 / 5;
   object-fit: cover;
+  /* frame shows hair to crossed arms of the full-length profile.jpg */
+  object-position: center 47%;
   border-radius: 12px;
 }
 
@@ -1411,7 +1417,8 @@ footer {
   .about-grid,
   .skills-wrap,
   .contact-grid {
-    grid-template-columns: 1fr;
+    /* minmax(0) lets the column shrink below the photo's 300px on tiny phones */
+    grid-template-columns: minmax(0, 1fr);
     gap: 3rem;
   }
 
@@ -1424,10 +1431,6 @@ footer {
     width: 300px;
     /* leave room for the border box that sits 18px to the right */
     max-width: calc(100% - 18px);
-  }
-
-  .photo-frame img {
-    height: 340px;
   }
 
   .skills-left {
