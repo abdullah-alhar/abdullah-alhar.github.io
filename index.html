@@ -8,7 +8,7 @@
 
   <title>Abdullah Alhar | AI &amp; IT Student Portfolio – SLIIT</title>
   <meta name="description"
-    content="Portfolio of Abdullah Alhar, a BSc IT student at SLIIT, Sri Lanka, specialising in AI. Web apps, machine learning and IoT projects. Open to internships." />
+    content="Portfolio of Abdullah Alhar, a BSc IT student at SLIIT, Sri Lanka, specialising in AI. Web apps, mobile apps and machine learning projects. Open to internships." />
   <meta name="author" content="Abdullah Alhar" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="theme-color" content="#0A0F1E" />
@@ -21,7 +21,7 @@
   <meta property="og:url" content="https://abdullah-alhar.github.io/" />
   <meta property="og:title" content="Abdullah Alhar | AI &amp; IT Student Portfolio" />
   <meta property="og:description"
-    content="BSc IT student at SLIIT specialising in Artificial Intelligence. Web apps, machine learning and IoT projects." />
+    content="BSc IT student at SLIIT specialising in Artificial Intelligence. Web apps, mobile apps and machine learning projects." />
   <meta property="og:image" content="https://abdullah-alhar.github.io/assets/profile.jpg" />
   <meta property="og:image:type" content="image/jpeg" />
   <meta property="og:image:width" content="941" />
@@ -32,7 +32,7 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Abdullah Alhar | AI &amp; IT Student Portfolio" />
   <meta name="twitter:description"
-    content="BSc IT student at SLIIT specialising in Artificial Intelligence. Web apps, machine learning and IoT projects." />
+    content="BSc IT student at SLIIT specialising in Artificial Intelligence. Web apps, mobile apps and machine learning projects." />
   <meta name="twitter:image" content="https://abdullah-alhar.github.io/assets/profile.jpg" />
 
   <!-- google info -->
@@ -67,7 +67,7 @@
         "familyName": "Alhar",
         "url": "https://abdullah-alhar.github.io/",
         "image": "https://abdullah-alhar.github.io/assets/profile.jpg",
-        "description": "BSc in Information Technology student at SLIIT, Sri Lanka, specialising in Artificial Intelligence. Builds web apps, machine learning models and IoT projects.",
+        "description": "BSc in Information Technology student at SLIIT, Sri Lanka, specialising in Artificial Intelligence. Builds web apps, mobile apps and machine learning models.",
         "jobTitle": "BSc in Information Technology Specialising in Artificial Intelligence",
         "affiliation": {
           "@type": "CollegeOrUniversity",
@@ -90,6 +90,7 @@
   <!-- one favicon for tabs, google search and iphone home screen (square, multiple of 48px) -->
   <link rel="icon" type="image/png" sizes="192x192" href="/favicon.png" />
   <link rel="apple-touch-icon" href="/favicon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
 
   <!-- fonts + icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -97,13 +98,22 @@
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/devicon@2.17.0/devicon.min.css" />
 
-  <link rel="stylesheet" href="style.css?v=3" />
+  <link rel="stylesheet" href="assets/css/style.css?v=1" />
+
+  <!-- show the splash screen once per visit, not on every reload -->
+  <script>
+    try {
+      if (sessionStorage.getItem('splash-seen')) document.documentElement.classList.add('no-splash');
+      sessionStorage.setItem('splash-seen', '1');
+    } catch (e) {}
+  </script>
 
 </head>
 
 <body>
+
+  <a href="#main" class="skip-link">Skip to content</a>
 
   <!-- splash screen -->
   <div class="pre">
@@ -131,11 +141,12 @@
         <li><a href="#skills" class="nav-link">Skills</a></li>
         <li><a href="#projects" class="nav-link">Projects</a></li>
         <li><a href="#achievements" class="nav-link">Achievements</a></li>
+        <li><a href="assets/docs/Abdullah_Alhar_CV.pdf" class="nav-cv" target="_blank" rel="noopener">Resume</a></li>
         <li><a href="#contact" class="nav-btn">Let's Connect</a></li>
       </ul>
 
       <div class="nav-right">
-        <button class="hamburger" id="hamburger" aria-label="Menu" aria-controls="nav-links">
+        <button class="hamburger" id="hamburger" aria-label="Menu" aria-controls="nav-links" aria-expanded="false">
           <i class="fa-solid fa-bars"></i>
         </button>
       </div>
@@ -143,7 +154,7 @@
   </nav>
   </header>
 
-  <main>
+  <main id="main" tabindex="-1">
 
   <!-- home -->
   <section id="home" class="hero">
@@ -258,44 +269,44 @@
         <div class="skill-group">
           <h3 class="anim">Languages</h3>
           <div class="skill-cards">
-            <div class="skill-card anim"><i class="devicon-java-plain colored"></i><span>Java</span></div>
-            <div class="skill-card anim"><i class="devicon-python-plain colored"></i><span>Python</span></div>
-            <div class="skill-card anim"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
-            <div class="skill-card anim"><i class="devicon-dart-plain colored"></i><span>Dart</span></div>
-            <div class="skill-card anim"><i class="devicon-c-plain colored"></i><span>C</span></div>
+            <div class="skill-card anim">Java</div>
+            <div class="skill-card anim">Python</div>
+            <div class="skill-card anim">JavaScript</div>
+            <div class="skill-card anim">Dart</div>
+            <div class="skill-card anim">C</div>
           </div>
         </div>
 
         <div class="skill-group">
           <h3 class="anim">Frameworks</h3>
           <div class="skill-cards">
-            <div class="skill-card anim"><i class="devicon-spring-plain colored"></i><span>Spring Boot</span></div>
-            <div class="skill-card anim"><i class="devicon-react-original colored"></i><span>React</span></div>
-            <div class="skill-card anim"><i class="devicon-flutter-plain colored"></i><span>Flutter</span></div>
-            <div class="skill-card anim"><i class="fa-solid fa-leaf thymeleaf"></i><span>Thymeleaf</span></div>
+            <div class="skill-card anim">Spring Boot</div>
+            <div class="skill-card anim">React</div>
+            <div class="skill-card anim">Flutter</div>
+            <div class="skill-card anim">Thymeleaf</div>
           </div>
         </div>
 
         <div class="skill-group">
           <h3 class="anim">AI &amp; Machine Learning</h3>
           <div class="skill-cards">
-            <div class="skill-card anim"><i class="devicon-jupyter-plain colored"></i><span>Jupyter</span></div>
-            <div class="skill-card anim"><i class="devicon-googlecolab-plain colored"></i><span>Google Colab</span></div>
-            <div class="skill-card anim"><i class="devicon-tensorflow-original colored"></i><span>TensorFlow</span></div>
-            <div class="skill-card anim"><i class="devicon-keras-plain colored"></i><span>Keras</span></div>
-            <div class="skill-card anim"><i class="devicon-scikitlearn-plain colored"></i><span>scikit-learn</span></div>
+            <div class="skill-card anim">Jupyter</div>
+            <div class="skill-card anim">Google Colab</div>
+            <div class="skill-card anim">TensorFlow</div>
+            <div class="skill-card anim">Keras</div>
+            <div class="skill-card anim">scikit-learn</div>
           </div>
         </div>
 
         <div class="skill-group">
           <h3 class="anim">Tools &amp; Platforms</h3>
           <div class="skill-cards">
-            <div class="skill-card anim"><i class="devicon-firebase-plain colored"></i><span>Firebase</span></div>
-            <div class="skill-card anim"><i class="devicon-mysql-plain colored"></i><span>MySQL</span></div>
-            <div class="skill-card anim"><i class="devicon-arduino-plain colored"></i><span>Arduino</span></div>
-            <div class="skill-card anim"><i class="devicon-git-plain colored"></i><span>Git</span></div>
-            <div class="skill-card anim"><i class="devicon-github-original"></i><span>GitHub</span></div>
-            <div class="skill-card anim"><i class="devicon-railway-plain"></i><span>Railway</span></div>
+            <div class="skill-card anim">Firebase</div>
+            <div class="skill-card anim">MySQL</div>
+            <div class="skill-card anim">Arduino</div>
+            <div class="skill-card anim">Git</div>
+            <div class="skill-card anim">GitHub</div>
+            <div class="skill-card anim">Railway</div>
           </div>
         </div>
       </div>
@@ -402,7 +413,7 @@
       </div>
 
       <div class="more-projects">
-        <button class="btn btn-ghost" id="more-projects"></button>
+        <button class="btn btn-ghost" id="more-projects">Show more projects <i class="fa-solid fa-arrow-down"></i></button>
       </div>
     </div>
   </section>
@@ -434,7 +445,7 @@
       <!-- to add a certificate, copy one card below and change the details -->
       <div class="cert-grid" id="cert-grid">
         <div class="cert-card anim winner">
-          <div class="cert-img" data-lightbox="assets/certificates/code-night.jpg" data-caption="Code Night - N3:GO Excellence Award">
+          <div class="cert-img" role="button" tabindex="0" aria-label="View certificate: Code Night - N3:GO Excellence Award" data-lightbox="assets/certificates/code-night.jpg" data-caption="Code Night - N3:GO Excellence Award">
             <span class="winner-badge"><i class="fa-solid fa-trophy"></i> Winner</span>
             <img src="assets/certificates/code-night.jpg" alt="Code Night - N3:GO Excellence Award certificate" width="1400" height="990" loading="lazy" decoding="async">
             <span class="zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
@@ -448,7 +459,7 @@
           </div>
         </div>
         <div class="cert-card anim">
-          <div class="cert-img" data-lightbox="assets/certificates/git-github.jpg" data-caption="Git &amp; GitHub 101 Workshop">
+          <div class="cert-img" role="button" tabindex="0" aria-label="View certificate: Git &amp; GitHub 101 Workshop" data-lightbox="assets/certificates/git-github.jpg" data-caption="Git &amp; GitHub 101 Workshop">
             <img src="assets/certificates/git-github.jpg" alt="Git &amp; GitHub 101 Workshop certificate" width="1400" height="990" loading="lazy" decoding="async">
             <span class="zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
           </div>
@@ -461,7 +472,7 @@
           </div>
         </div>
         <div class="cert-card anim">
-          <div class="cert-img" data-lightbox="assets/certificates/python.jpg" data-caption="Python for Beginners">
+          <div class="cert-img" role="button" tabindex="0" aria-label="View certificate: Python for Beginners" data-lightbox="assets/certificates/python.jpg" data-caption="Python for Beginners">
             <img src="assets/certificates/python.jpg" alt="Python for Beginners certificate" width="1400" height="990" loading="lazy" decoding="async">
             <span class="zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
           </div>
@@ -475,7 +486,7 @@
           </div>
         </div>
         <div class="cert-card anim">
-          <div class="cert-img" data-lightbox="assets/certificates/web-design.jpg" data-caption="Web Design for Beginners">
+          <div class="cert-img" role="button" tabindex="0" aria-label="View certificate: Web Design for Beginners" data-lightbox="assets/certificates/web-design.jpg" data-caption="Web Design for Beginners">
             <img src="assets/certificates/web-design.jpg" alt="Web Design for Beginners certificate" width="1400" height="990" loading="lazy" decoding="async">
             <span class="zoom-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
           </div>
@@ -566,19 +577,20 @@
   </footer>
 
   <!-- big image popup for certificates -->
-  <div class="lightbox" id="lightbox">
-    <button class="lightbox-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
-    <img src="" alt="Certificate" id="lightbox-img" />
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Certificate" aria-hidden="true">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    <img alt="Certificate" id="lightbox-img" />
     <p id="lightbox-caption"></p>
   </div>
 
   <!-- back to top -->
   <button class="to-top" id="to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4.4.1/dist/email.min.js"></script>
-  <script src="app.js?v=2"></script>
+  <!-- deferred scripts run in this order after the page is parsed -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4.4.1/dist/email.min.js"></script>
+  <script defer src="assets/js/app.js?v=1"></script>
 </body>
 
 </html>

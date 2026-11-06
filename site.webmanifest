@@ -1,0 +1,12 @@
+{
+  "name": "Abdullah Alhar",
+  "short_name": "Abdullah",
+  "description": "Portfolio of Abdullah Alhar, a BSc IT student at SLIIT specialising in AI.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#0A0F1E",
+  "theme_color": "#0A0F1E",
+  "icons": [
+    { "src": "/favicon.png", "sizes": "192x192", "type": "image/png" }
+  ]
+}

@@ -1,8 +1,7 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* abdullah-alhar.github.io styles
+   sections in order: variables, base, layout, components, responsive */
+
+/* ========== variables: colours ========== */
 
 /* colors */
 :root {
@@ -14,9 +13,17 @@
   --accent-soft: rgba(79, 195, 247, 0.12);
   --text: #F0F4FF;
   --text-muted: #8B9CC8;
-  --text-dim: #5A6A90;
+  --text-dim: #7686B0;
   --nav-bg: rgba(10, 15, 30, 0.85);
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* ========== base: reset, page defaults, keyboard focus, splash screen, progress bar ========== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -59,6 +66,34 @@ button {
 ::selection {
   background: var(--accent);
   color: var(--bg);
+}
+
+/* keyboard focus */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+main:focus {
+  outline: none;
+}
+
+.skip-link {
+  position: fixed;
+  top: 0.8rem;
+  left: 0.8rem;
+  z-index: 11000;
+  padding: 0.6rem 1.1rem;
+  border-radius: 8px;
+  background: var(--accent);
+  color: var(--bg);
+  font-weight: 600;
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: none;
 }
 
 ::-webkit-scrollbar {
@@ -105,7 +140,7 @@ button {
   height: 35vh;
   max-width: 75vw;
   aspect-ratio: 600 / 492;
-  background: url('assets/logo.png') center / contain no-repeat;
+  background: url('../logo.png') center / contain no-repeat;
 }
 
 .splash-name {
@@ -114,6 +149,10 @@ button {
   letter-spacing: 6px;
   text-transform: uppercase;
   color: var(--text-muted);
+}
+
+.no-splash .pre {
+  display: none;
 }
 
 @keyframes pre-exit {
@@ -152,6 +191,8 @@ button {
   background: var(--accent);
   z-index: 1100;
 }
+
+/* ========== layout: navbar, hero, section spacing, footer ========== */
 
 /* ---------- navbar ---------- */
 #navbar {
@@ -253,6 +294,26 @@ button {
   color: var(--bg);
 }
 
+/* resume pill, sits next to Let's Connect */
+.nav-cv {
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.5rem 1.3rem;
+  border: 2px solid var(--border);
+  border-radius: 50px;
+  color: var(--text);
+  transition: 0.3s;
+}
+
+.nav-cv:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.nav-links li:has(.nav-cv) {
+  margin-right: -1.2rem;
+}
+
 .nav-right {
   display: flex;
   align-items: center;
@@ -270,49 +331,6 @@ button {
   font-size: 1rem;
   cursor: pointer;
   display: none;
-}
-
-/* ---------- buttons ---------- */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  padding: 0.85rem 1.9rem;
-  border-radius: 50px;
-  font-size: 0.95rem;
-  font-weight: 500;
-  cursor: pointer;
-  border: 2px solid var(--accent);
-  transition: 0.3s;
-}
-
-.btn-primary {
-  background: var(--accent);
-  color: var(--bg);
-}
-
-.btn-primary:hover {
-  background: transparent;
-  color: var(--accent);
-  transform: translateY(-3px);
-}
-
-.btn-ghost {
-  background: transparent;
-  color: var(--text);
-  border-color: var(--border);
-}
-
-.btn-ghost:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-  transform: translateY(-3px);
-}
-
-.btn:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-  transform: none;
 }
 
 /* ---------- hero ---------- */
@@ -498,6 +516,89 @@ button {
   background: var(--accent);
 }
 
+/* ---------- footer ---------- */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 2rem 0;
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-inner p {
+  font-size: 0.9rem;
+  color: var(--text-dim);
+}
+
+.footer-inner p span {
+  color: var(--accent);
+}
+
+.footer-socials {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.footer-socials a {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  transition: 0.3s;
+}
+
+.footer-socials a:hover {
+  color: var(--accent);
+}
+
+/* ========== components: buttons and the content of each section ========== */
+
+/* ---------- buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1.9rem;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: 2px solid var(--accent);
+  transition: 0.3s;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.btn-primary:hover {
+  background: transparent;
+  color: var(--accent);
+  transform: translateY(-3px);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text);
+  border-color: var(--border);
+}
+
+.btn-ghost:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-3px);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
 /* ---------- about ---------- */
 .about-grid {
   display: grid;
@@ -589,42 +690,25 @@ button {
 }
 
 .skill-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
 }
 
 .skill-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.6rem;
-  padding: 1.3rem 0.5rem;
+  padding: 0.65rem 1.3rem;
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 12px;
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  transition: 0.3s;
-}
-
-.skill-card i {
-  font-size: 2.3rem;
+  font-size: 0.95rem;
+  font-weight: 500;
   color: var(--text);
-}
-
-.skill-card .thymeleaf {
-  color: #3FAE49;
-}
-
-/* mysql blue is too dark on the background */
-.skill-card .devicon-mysql-plain {
-  color: #4A9FD8;
+  transition: 0.3s;
 }
 
 .skill-card:hover {
   border-color: var(--accent);
-  color: var(--text);
+  color: var(--accent);
   transform: translateY(-5px);
   box-shadow: var(--shadow);
 }
@@ -728,7 +812,8 @@ button {
   transition: opacity 0.3s;
 }
 
-.project-card:hover .project-overlay {
+.project-card:hover .project-overlay,
+.project-overlay:focus-within {
   opacity: 1;
 }
 
@@ -927,8 +1012,13 @@ button {
   transition: 0.3s;
 }
 
-.cert-img:hover .zoom-icon {
+.cert-img:hover .zoom-icon,
+.cert-img:focus-visible .zoom-icon {
   opacity: 1;
+}
+
+.cert-img:focus-visible {
+  outline-offset: -3px;
 }
 
 .award-small {
@@ -1115,6 +1205,8 @@ button {
 .lightbox.open {
   opacity: 1;
   visibility: visible;
+  /* visible straight away so the close button can take focus */
+  transition: opacity 0.3s, visibility 0s;
 }
 
 .lightbox img {
@@ -1148,7 +1240,7 @@ button {
   color: var(--text);
   font-size: 1.1rem;
   cursor: pointer;
-  transition: 0.3s;
+  transition: color 0.3s, border-color 0.3s, transform 0.3s;
 }
 
 .lightbox-close:hover {
@@ -1300,44 +1392,6 @@ button {
   color: #F87171;
 }
 
-/* ---------- footer ---------- */
-footer {
-  border-top: 1px solid var(--border);
-  padding: 2rem 0;
-}
-
-.footer-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.footer-inner p {
-  font-size: 0.9rem;
-  color: var(--text-dim);
-}
-
-.footer-inner p span {
-  color: var(--accent);
-}
-
-.footer-socials {
-  display: flex;
-  gap: 1.2rem;
-}
-
-.footer-socials a {
-  font-size: 1.1rem;
-  color: var(--text-muted);
-  transition: 0.3s;
-}
-
-.footer-socials a:hover {
-  color: var(--accent);
-}
-
 /* ---------- back to top ---------- */
 .to-top {
   position: fixed;
@@ -1369,6 +1423,8 @@ footer {
   transform: translateY(-4px);
 }
 
+/* ========== responsive: tablet and phone layouts, reduced motion (keep last) ========== */
+
 /* ---------- tablet ---------- */
 @media (max-width: 950px) {
   .hamburger {
@@ -1389,16 +1445,23 @@ footer {
     background: var(--card);
     border-left: 1px solid var(--border);
     transform: translateX(100%);
-    transition: transform 0.4s ease;
+    visibility: hidden;
+    transition: transform 0.4s ease, visibility 0s 0.4s;
   }
 
   .nav-links.open {
     transform: translateX(0);
+    visibility: visible;
+    transition: transform 0.4s ease;
     box-shadow: -10px 0 30px rgba(0, 0, 0, 0.3);
   }
 
   .nav-link {
     font-size: 1.1rem;
+  }
+
+  .nav-links li:has(.nav-cv) {
+    margin-right: 0;
   }
 
   .nav-right {
@@ -1523,16 +1586,31 @@ footer {
     font-size: 2.7rem;
   }
 
-  .skill-cards {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
   .filter-btns {
     gap: 0.5rem;
   }
 
   .filter-btn {
     padding: 0.45rem 1rem;
+  }
+}
+
+/* people who asked their system for less motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .pre {
+    display: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition: none !important;
   }
 }
 

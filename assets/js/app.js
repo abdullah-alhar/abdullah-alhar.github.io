@@ -1,94 +1,16 @@
-// project cards are written straight into index.html (#projects-grid)
-// so search engines can read them without running JavaScript
+// abdullah-alhar.github.io scripts
+// sections in order: main, navigation, projects, certificates, effects, contact
 
-// filter buttons (all / web / ai / iot)
-// iot projects stay hidden under "All" until "show more" is clicked
-const filterBtns = document.querySelectorAll('.filter-btn');
-const moreBtn = document.getElementById('more-projects');
-let filter = 'all';
-let showMore = false;
+// ========== main: shared settings and footer year ==========
 
-function showProjects() {
-  const cards = document.querySelectorAll('.project-card');
-  const shown = [];
+// people who asked their system for less motion get no animations
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const scrollBehavior = reduceMotion ? 'auto' : 'smooth';
 
-  cards.forEach(card => {
-    const category = card.dataset.category;
-    const visible = filter === 'all' ? (showMore || category !== 'iot') : category === filter;
-    if (visible) {
-      if (card.classList.contains('hidden')) shown.push(card);
-      card.classList.remove('hidden');
-    } else {
-      card.classList.add('hidden');
-    }
-  });
+// footer year
+document.getElementById('year').textContent = new Date().getFullYear();
 
-  moreBtn.classList.toggle('hidden', filter !== 'all');
-  moreBtn.innerHTML = showMore
-    ? 'Show less <i class="fa-solid fa-arrow-up"></i>'
-    : 'Show more projects <i class="fa-solid fa-arrow-down"></i>';
-
-  return shown;
-}
-
-function animateIn(cards) {
-  if (window.gsap) {
-    gsap.fromTo(cards, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.5, stagger: 0.1, overwrite: true, clearProps: 'transform' });
-    ScrollTrigger.refresh();
-  }
-}
-
-filterBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    filterBtns.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-
-    filter = btn.dataset.filter;
-    showMore = false;
-    showProjects();
-    animateIn([...document.querySelectorAll('.project-card:not(.hidden)')]);
-  });
-});
-
-moreBtn.addEventListener('click', () => {
-  showMore = !showMore;
-  animateIn(showProjects());
-  if (!showMore) document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
-});
-
-showProjects();
-
-// certificates are written straight into index.html (#cert-grid)
-
-// click a certificate to see it big
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightbox-img');
-const lightboxCaption = document.getElementById('lightbox-caption');
-
-document.querySelectorAll('[data-lightbox]').forEach(item => {
-  item.addEventListener('click', () => {
-    lightboxImg.src = item.dataset.lightbox;
-    lightboxCaption.textContent = item.dataset.caption;
-    lightbox.classList.add('open');
-  });
-});
-
-function closeLightbox() {
-  lightbox.classList.remove('open');
-}
-
-lightbox.addEventListener('click', e => {
-  // close when clicking outside the image
-  if (e.target !== lightboxImg) {
-    closeLightbox();
-  }
-});
-
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') {
-    closeLightbox();
-  }
-});
+// ========== navigation: mobile menu, navbar on scroll, back-to-top ==========
 
 // mobile menu
 const hamburger = document.getElementById('hamburger');
@@ -96,11 +18,13 @@ const navLinks = document.getElementById('nav-links');
 
 function openMenu() {
   navLinks.classList.add('open');
+  hamburger.setAttribute('aria-expanded', 'true');
   hamburger.querySelector('i').className = 'fa-solid fa-xmark';
 }
 
 function closeMenu() {
   navLinks.classList.remove('open');
+  hamburger.setAttribute('aria-expanded', 'false');
   hamburger.querySelector('i').className = 'fa-solid fa-bars';
 }
 
@@ -169,8 +93,129 @@ window.addEventListener('scroll', () => {
 });
 
 toTop.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  window.scrollTo({ top: 0, behavior: scrollBehavior });
 });
+
+// ========== projects: project filter and "show more" ==========
+
+// project cards are written straight into index.html (#projects-grid)
+// so search engines can read them without running JavaScript
+
+// filter buttons (all / web / ai / iot)
+// iot projects stay hidden under "All" until "show more" is clicked
+const filterBtns = document.querySelectorAll('.filter-btn');
+const moreBtn = document.getElementById('more-projects');
+let filter = 'all';
+let showMore = false;
+
+function showProjects() {
+  const cards = document.querySelectorAll('.project-card');
+  const shown = [];
+
+  cards.forEach(card => {
+    const category = card.dataset.category;
+    const visible = filter === 'all' ? (showMore || category !== 'iot') : category === filter;
+    if (visible) {
+      if (card.classList.contains('hidden')) shown.push(card);
+      card.classList.remove('hidden');
+    } else {
+      card.classList.add('hidden');
+    }
+  });
+
+  moreBtn.classList.toggle('hidden', filter !== 'all');
+  moreBtn.innerHTML = showMore
+    ? 'Show less <i class="fa-solid fa-arrow-up"></i>'
+    : 'Show more projects <i class="fa-solid fa-arrow-down"></i>';
+
+  return shown;
+}
+
+function animateIn(cards) {
+  if (window.gsap && !reduceMotion) {
+    gsap.fromTo(cards, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.5, stagger: 0.1, overwrite: true, clearProps: 'transform' });
+    ScrollTrigger.refresh();
+  }
+}
+
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    filter = btn.dataset.filter;
+    showMore = false;
+    showProjects();
+    animateIn([...document.querySelectorAll('.project-card:not(.hidden)')]);
+  });
+});
+
+moreBtn.addEventListener('click', () => {
+  showMore = !showMore;
+  animateIn(showProjects());
+  if (!showMore) document.getElementById('projects').scrollIntoView({ behavior: scrollBehavior });
+});
+
+showProjects();
+
+// ========== certificates: certificate lightbox ==========
+
+// certificates are written straight into index.html (#cert-grid)
+
+// click a certificate (or press Enter on it) to see it big
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const lightboxCaption = document.getElementById('lightbox-caption');
+const lightboxClose = document.getElementById('lightbox-close');
+let lastFocused = null;
+
+function openLightbox(item) {
+  lastFocused = item;
+  lightboxImg.src = item.dataset.lightbox;
+  lightboxImg.alt = item.dataset.caption + ' certificate';
+  lightboxCaption.textContent = item.dataset.caption;
+  lightbox.classList.add('open');
+  lightbox.setAttribute('aria-hidden', 'false');
+  lightboxClose.focus();
+}
+
+function closeLightbox() {
+  if (!lightbox.classList.contains('open')) return;
+  lightbox.classList.remove('open');
+  lightbox.setAttribute('aria-hidden', 'true');
+  if (lastFocused) lastFocused.focus();
+}
+
+document.querySelectorAll('[data-lightbox]').forEach(item => {
+  item.addEventListener('click', () => openLightbox(item));
+  item.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      openLightbox(item);
+    }
+  });
+});
+
+lightbox.addEventListener('click', e => {
+  // close when clicking outside the image
+  if (e.target !== lightboxImg) {
+    closeLightbox();
+  }
+});
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    closeLightbox();
+    closeMenu();
+  }
+  // the close button is the only thing to focus while the lightbox is open
+  if (e.key === 'Tab' && lightbox.classList.contains('open')) {
+    e.preventDefault();
+    lightboxClose.focus();
+  }
+});
+
+// ========== effects: hero dots and gsap animations ==========
 
 // dots background in the hero
 // dots near the mouse get bigger and brighter
@@ -193,21 +238,20 @@ function resizeCanvas() {
   ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 }
 resizeCanvas();
-window.addEventListener('resize', resizeCanvas);
-
-window.addEventListener('mousemove', e => {
-  const rect = canvas.getBoundingClientRect();
-  mouseX = e.clientX - rect.left;
-  mouseY = e.clientY - rect.top;
+window.addEventListener('resize', () => {
+  resizeCanvas();
+  if (reduceMotion) drawDots();
 });
 
-function drawGrid() {
-  // stop drawing when the hero is off screen, saves battery
-  if (window.scrollY > hero.offsetHeight) {
-    running = false;
-    return;
-  }
+if (!reduceMotion) {
+  window.addEventListener('mousemove', e => {
+    const rect = canvas.getBoundingClientRect();
+    mouseX = e.clientX - rect.left;
+    mouseY = e.clientY - rect.top;
+  });
+}
 
+function drawDots() {
   ctx.clearRect(0, 0, w, h);
 
   for (let x = spacing / 2; x < w; x += spacing) {
@@ -221,20 +265,34 @@ function drawGrid() {
       ctx.fill();
     }
   }
+}
 
+function drawGrid() {
+  // stop drawing when the hero is off screen, saves battery
+  if (window.scrollY > hero.offsetHeight) {
+    running = false;
+    return;
+  }
+  drawDots();
   requestAnimationFrame(drawGrid);
 }
 
 function startGrid() {
+  if (reduceMotion) return;
   if (!running && window.scrollY <= hero.offsetHeight) {
     running = true;
     requestAnimationFrame(drawGrid);
   }
 }
-startGrid();
 
-// animations with gsap
-if (window.gsap) {
+if (reduceMotion) {
+  drawDots();
+} else {
+  startGrid();
+}
+
+// animations with gsap (skipped for people who asked for less motion)
+if (window.gsap && !reduceMotion) {
   gsap.registerPlugin(ScrollTrigger);
 
   // hero text comes in after the splash screen
@@ -243,7 +301,8 @@ if (window.gsap) {
     opacity: 0,
     duration: 0.8,
     stagger: 0.12,
-    delay: 1.9,
+    // straight away if the splash was skipped on a repeat visit
+    delay: document.documentElement.classList.contains('no-splash') ? 0.1 : 1.9,
     ease: 'power3.out'
   });
 
@@ -277,6 +336,8 @@ if (window.gsap) {
     clearProps: 'transform'
   });
 }
+
+// ========== contact: contact form (emailjs) ==========
 
 // contact form (sends with emailjs)
 // keys are from emailjs.com dashboard, the public key is ok to be public
@@ -344,12 +405,9 @@ form.addEventListener('submit', async e => {
     form.reset();
   } catch (err) {
     console.log(err);
-    showStatus('Something went wrong. Please try again in a bit.', 'error');
+    showStatus("Your message didn't send. Check your internet connection and try again, or message me on LinkedIn.", 'error');
   }
 
   submitBtn.innerHTML = 'Send Message <i class="fa-solid fa-paper-plane"></i>';
   submitBtn.disabled = false;
 });
-
-// footer year
-document.getElementById('year').textContent = new Date().getFullYear();
