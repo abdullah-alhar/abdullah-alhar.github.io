@@ -6,6 +6,26 @@ User-agent: Googlebot-Image
 Disallow: /assets/certificates/
 
 User-agent: Googlebot
+Allow: /
 Disallow: /assets/certificates/
+
+# AI search and answer engines are welcome to read the site
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
 
 Sitemap: https://abdullah-alhar.github.io/sitemap.xml

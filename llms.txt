@@ -1,0 +1,35 @@
+# Abdullah Alhar
+
+> Abdullah Alhar is a 2nd year BSc in Information Technology student at SLIIT (Sri Lanka Institute of Information Technology) in Sri Lanka, specialising in Artificial Intelligence. Abdullah builds web apps with Spring Boot and React, mobile apps with Flutter, and machine learning projects with Python, and is looking for internships.
+
+- Studying: BSc in Information Technology Specialising in Artificial Intelligence, SLIIT (2025 - present). Dean's List, Year 1 Semester 1.
+- Before university: Harvard CS50x (Introduction to Computer Science) and CS50P (Introduction to Programming with Python), online, 2024.
+- IEEE Student Member (IEEE Sri Lanka Section, 2026).
+- Winner: Code Night N3:GO Excellence Award, SLIIT Mozilla Campus Club (Aug 2026).
+- Languages spoken: English, Tamil, Sinhala.
+- Location: Sri Lanka.
+
+## Skills
+
+- Languages: Java, Python, JavaScript, Dart, C
+- Frameworks: Spring Boot, React, Flutter, Thymeleaf
+- AI and machine learning: Jupyter, Google Colab, TensorFlow, Keras, scikit-learn
+- Tools and platforms: Firebase, MySQL, Arduino, Git, GitHub, Railway
+
+## Projects
+
+- [SmartNest Apartment Sales System](https://github.com/abdullah-alhar/smartnest-apartment-system): a full-stack web app built with React and Spring Boot that moves an apartment sales company online, from customer inquiry to reservation.
+- [Malaria Cell Image Classifier](https://github.com/abdullah-alhar/malaria-cell-classification): a CNN built from scratch with TensorFlow and Keras that classifies blood cell images as infected or healthy, with 94.2% test accuracy (0.975 ROC-AUC).
+- [Student Course Registration System](https://github.com/abdullah-alhar/student-registration): a full-stack MVC web app built with Java, Spring Boot and Thymeleaf for a university OOP module.
+
+## Links
+
+- [Portfolio](https://abdullah-alhar.github.io/)
+- [CV (PDF)](https://abdullah-alhar.github.io/assets/docs/Abdullah_Alhar_CV.pdf)
+- [LinkedIn](https://www.linkedin.com/in/abdullah-alhar/)
+- [GitHub](https://github.com/Abdullah-alhar)
+- [Instagram](https://www.instagram.com/abdullah__alhar/)
+
+## Contact
+
+Use the contact form at https://abdullah-alhar.github.io/#contact or message Abdullah on LinkedIn.

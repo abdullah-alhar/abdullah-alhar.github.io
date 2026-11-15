@@ -11,6 +11,7 @@ index.html          the whole site
 404.html            page shown for broken links
 robots.txt          search engine rules (keeps certificate scans out of image search)
 sitemap.xml         page list for Google
+llms.txt            plain-text summary for AI assistants (ChatGPT, Claude, Perplexity)
 site.webmanifest    name, colours and icon for phones
 favicon.png         tab and home screen icon (192x192)
 email-templates/    copies of the two EmailJS templates (the live ones are in the EmailJS dashboard)
@@ -33,5 +34,6 @@ Moving them would break those.
 - **Add a project:** copy one `<article class="project-card">` in `index.html` and change it.
   Projects are written in the HTML (not loaded by JavaScript) so search engines can read them.
 - **Add a certificate:** copy one `cert-card` in `index.html` and put the scan in `assets/certificates/`.
+- **FAQ:** the "Quick Answers" questions are also in the FAQPage schema in `<head>`. Change both together.
 - **New CV:** replace `assets/docs/Abdullah_Alhar_CV.pdf` with the same file name.
 - **After changing `style.css` or `app.js`:** bump its `?v=` number in `index.html` so visitors don't get the old cached copy.
