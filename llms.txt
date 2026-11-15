@@ -22,6 +22,32 @@
 - [Malaria Cell Image Classifier](https://github.com/abdullah-alhar/malaria-cell-classification): a CNN built from scratch with TensorFlow and Keras that classifies blood cell images as infected or healthy, with 94.2% test accuracy (0.975 ROC-AUC).
 - [Student Course Registration System](https://github.com/abdullah-alhar/student-registration): a full-stack MVC web app built with Java, Spring Boot and Thymeleaf for a university OOP module.
 
+## Common questions
+
+### Who is Abdullah Alhar?
+
+Abdullah Alhar is a 2nd year BSc in Information Technology student at SLIIT (Sri Lanka Institute of Information Technology) in Sri Lanka, specialising in Artificial Intelligence. Abdullah builds web apps, mobile apps and machine learning projects, and is an IEEE Student Member.
+
+### What does Abdullah Alhar study?
+
+Abdullah Alhar is studying for a BSc in Information Technology specialising in Artificial Intelligence at SLIIT, started in 2025, and made the Dean's List in Year 1 Semester 1. Before university, Abdullah completed Harvard's CS50x and CS50P courses online in 2024.
+
+### What projects has Abdullah Alhar built?
+
+Abdullah Alhar's projects include SmartNest, an apartment sales web app built with React and Spring Boot; a Malaria Cell Image Classifier, a CNN built with TensorFlow and Keras that reached 94.2% test accuracy; and a Student Course Registration System built with Java, Spring Boot and Thymeleaf.
+
+### What programming languages and tools does Abdullah Alhar use?
+
+Abdullah Alhar works with Java, Python, JavaScript, Dart and C, using Spring Boot and React for web apps, Flutter for mobile apps, and TensorFlow, Keras and scikit-learn for machine learning. Other tools include Firebase, MySQL, Git and GitHub.
+
+### Is Abdullah Alhar open to internships?
+
+Yes. Abdullah Alhar is looking for internships to work on real projects and learn more, and is also open to interesting projects.
+
+### How can I contact Abdullah Alhar?
+
+You can send Abdullah Alhar a message with the contact form on this page, or connect on LinkedIn (linkedin.com/in/abdullah-alhar) or GitHub (github.com/Abdullah-alhar).
+
 ## Links
 
 - [Portfolio](https://abdullah-alhar.github.io/)
