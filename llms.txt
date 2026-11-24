@@ -1,6 +1,6 @@
 # Abdullah Alhar
 
-> Abdullah Alhar (also written Abdullah Bin Alhar) is a 2nd year BSc in Information Technology student at SLIIT (Sri Lanka Institute of Information Technology) in Sri Lanka, specialising in Artificial Intelligence. Abdullah builds web apps with Spring Boot and React, mobile apps with Flutter, and machine learning projects with Python, works as a freelance full-stack developer, and is looking for internships.
+> Abdullah Alhar is a 2nd year BSc in Information Technology student at SLIIT (Sri Lanka Institute of Information Technology) in Sri Lanka, specialising in Artificial Intelligence. Abdullah builds web apps with Spring Boot and React, mobile apps with Flutter, and machine learning projects with Python, works as a freelance full-stack developer, and is looking for internships.
 
 - Studying: BSc in Information Technology Specialising in Artificial Intelligence, SLIIT (2025 - present). Dean's List, Year 1 Semester 1.
 - Before university: Harvard CS50x (Introduction to Computer Science) and CS50P (Introduction to Programming with Python), online, 2024.
