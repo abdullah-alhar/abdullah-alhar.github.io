@@ -5,12 +5,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="google-site-verification" content="gwh9Gqta7kUiDh3vOW7oqmTr35GXXeMxLb7vNaq9VOg" />
+  <!-- Bing Webmaster Tools (drives ChatGPT search). Uncomment and paste your key from
+       https://www.bing.com/webmasters -> Add site -> HTML meta tag method -->
+  <!-- <meta name="msvalidate.01" content="PASTE_YOUR_BING_VERIFICATION_KEY" /> -->
 
   <title>Abdullah Alhar | AI &amp; IT Student Portfolio – SLIIT</title>
   <meta name="description"
     content="Portfolio of Abdullah Alhar, a BSc IT student at SLIIT, Sri Lanka, specialising in AI. Web apps, mobile apps and machine learning projects. Open to internships." />
   <meta name="author" content="Abdullah Alhar" />
-  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
   <meta name="theme-color" content="#0A0F1E" />
   <link rel="canonical" href="https://abdullah-alhar.github.io/" />
 
@@ -53,6 +56,7 @@
         "@type": "ProfilePage",
         "@id": "https://abdullah-alhar.github.io/#profile",
         "url": "https://abdullah-alhar.github.io/",
+        "dateModified": "2026-11-24",
         "name": "Abdullah Alhar | AI & IT Student Portfolio",
         "isPartOf": { "@id": "https://abdullah-alhar.github.io/#website" },
         "primaryImageOfPage": { "@type": "ImageObject", "url": "https://abdullah-alhar.github.io/assets/profile.jpg", "width": 941, "height": 1672, "caption": "Abdullah Alhar" },
@@ -63,11 +67,13 @@
         "@type": "Person",
         "@id": "https://abdullah-alhar.github.io/#person",
         "name": "Abdullah Alhar",
+        "alternateName": ["Abdullah Bin Alhar", "abdullah-alhar", "abdullah__alhar"],
         "givenName": "Abdullah",
         "familyName": "Alhar",
         "url": "https://abdullah-alhar.github.io/",
         "image": "https://abdullah-alhar.github.io/assets/profile.jpg",
         "description": "Abdullah Alhar is a 2nd year BSc in Information Technology student at SLIIT, Sri Lanka, specialising in Artificial Intelligence. Builds web apps with Spring Boot and React, mobile apps with Flutter, and machine learning models with Python. Open to internships.",
+        "disambiguatingDescription": "Sri Lankan IT undergraduate at SLIIT specialising in Artificial Intelligence and a freelance full-stack developer; not affiliated with similarly named individuals such as Abdullah Alharbi, Abdullah al-Harari or Abdullah Al-Hamar.",
         "jobTitle": "BSc IT Student (Artificial Intelligence)",
         "affiliation": {
           "@type": "CollegeOrUniversity",
@@ -157,6 +163,45 @@
               "codeRepository": "https://github.com/abdullah-alhar/smart-home",
               "keywords": "ESP32, 433MHz RF, EEPROM, Wi-Fi, Mobile App",
               "image": "https://abdullah-alhar.github.io/assets/smart-gate.jpg",
+              "author": { "@id": "https://abdullah-alhar.github.io/#person" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "item": {
+              "@type": "SoftwareSourceCode",
+              "name": "VetPOS — Offline POS & Inventory System",
+              "description": "An offline point-of-sale and inventory system for a veterinary shop in Sri Lanka, built as a native Windows app with .NET 10, WPF and SQLite, with a receipt designer, PDF and Excel reports, backups and an AI assistant that answers questions from the shop's own data.",
+              "codeRepository": "https://github.com/Abdullah-alhar/pos-ph",
+              "programmingLanguage": "C#",
+              "keywords": ".NET 10, WPF, C#, SQLite, Windows, POS, Inventory Management, AI Assistant",
+              "author": { "@id": "https://abdullah-alhar.github.io/#person" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 7,
+            "item": {
+              "@type": "SoftwareSourceCode",
+              "name": "LMS App — Mobile Learning Management System",
+              "description": "A mobile learning management system with an Express API and a React Native app, where lecturers create courses, upload materials and publish timed quizzes and students enrol, study and take auto-marked quizzes.",
+              "codeRepository": "https://github.com/Abdullah-alhar/LMS-App",
+              "programmingLanguage": ["JavaScript"],
+              "keywords": "React Native, Expo, Node.js, Express 5, MongoDB, JWT, Cloudinary, LMS",
+              "author": { "@id": "https://abdullah-alhar.github.io/#person" }
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 8,
+            "item": {
+              "@type": "SoftwareSourceCode",
+              "name": "Claude Count Usage",
+              "description": "An open-source usage tracker for the Claude Desktop app that adds live session and weekly usage bars with reset timers, plus the token count and cost of the current reply.",
+              "codeRepository": "https://github.com/Abdullah-alhar/claude-count-usage",
+              "programmingLanguage": "JavaScript",
+              "keywords": "JavaScript, Claude Desktop, Developer Tool, Open Source, Usage Tracker",
               "author": { "@id": "https://abdullah-alhar.github.io/#person" }
             }
           }
@@ -278,7 +323,7 @@
         </div>
 
         <div class="about-text">
-          <p class="anim">I'm Abdullah Alhar, a 2nd year BSc IT student at <strong>SLIIT</strong> in Sri Lanka, specialising in
+          <p class="anim">I'm Abdullah Alhar (also written Abdullah Bin Alhar), a 2nd year BSc IT student at <strong>SLIIT</strong> in Sri Lanka, specialising in
             <strong>Artificial Intelligence</strong>. I actually started coding before university by doing Harvard's
             CS50 courses online, and that's what got me really into programming.
           </p>
@@ -403,6 +448,9 @@
         <button class="filter-btn" data-filter="web">Web</button>
         <button class="filter-btn" data-filter="ai">AI / ML</button>
         <button class="filter-btn" data-filter="iot">IoT</button>
+        <button class="filter-btn" data-filter="desktop">Desktop</button>
+        <button class="filter-btn" data-filter="mobile">Mobile</button>
+        <button class="filter-btn" data-filter="tools">Tools</button>
       </div>
 
       <!-- to add a project, copy one <article> card below and change the details -->
@@ -491,6 +539,59 @@
             <h3>Smart Gate System</h3>
             <p>An ESP32 smart gate controller that lets you open a home gate from a mobile app over Wi-Fi. It uses a 433MHz RF receiver to capture and store the rolling-gate remote's signal in EEPROM memory. Once stored, the gate can be triggered from anywhere in the world via a mobile app. The app sends a command over Wi-Fi to the ESP32 (connected to home network), which replays the 433MHz signal to the RF transmitter, locking or unlocking the gate remotely.</p>
             <div class="tech-tags"><span class="tag">ESP32</span><span class="tag">433MHz RF</span><span class="tag">EEPROM</span><span class="tag">Wi-Fi</span><span class="tag">Mobile App</span></div>
+          </div>
+        </article>
+        <article class="project-card" data-category="desktop">
+          <div class="project-img placeholder" aria-hidden="true">
+            <i class="fa-solid fa-cash-register"></i>
+            <div class="project-overlay">
+              <a href="https://github.com/Abdullah-alhar/pos-ph" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> View Code</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-top">
+              <span class="project-type">Desktop App</span>
+              <span class="project-badge">Runs a real shop</span>
+              <a href="https://github.com/Abdullah-alhar/pos-ph" target="_blank" rel="noopener noreferrer" class="project-git" aria-label="VetPOS on GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <h3>VetPOS — Offline POS &amp; Inventory System</h3>
+            <p>An offline point-of-sale and inventory system for a veterinary shop in Sri Lanka, built as a native Windows app with .NET 10, WPF and SQLite. It handles keyboard-first billing and stock for pet food, farm and livestock feed, animal medicine and accessories, with medicine details (generic name, strength, form, species), a receipt designer, PDF and Excel reports, backups, and an AI assistant that answers questions from the shop's own data. It is in beta and installed on the shop's PC.</p>
+            <div class="tech-tags"><span class="tag">.NET 10</span><span class="tag">WPF</span><span class="tag">C#</span><span class="tag">SQLite</span><span class="tag">AI Assistant</span></div>
+          </div>
+        </article>
+        <article class="project-card" data-category="mobile">
+          <div class="project-img placeholder" aria-hidden="true">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <div class="project-overlay">
+              <a href="https://github.com/Abdullah-alhar/LMS-App" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> View Code</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-top">
+              <span class="project-type">Mobile + API</span>
+              <a href="https://github.com/Abdullah-alhar/LMS-App" target="_blank" rel="noopener noreferrer" class="project-git" aria-label="LMS App on GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <h3>LMS App — Mobile Learning Management System</h3>
+            <p>A mobile learning management system with an Express API and a React Native app. Lecturers create courses, upload materials (PDF, Word, PowerPoint and video) and publish timed quizzes; students enrol with a key, study, and take quizzes that are marked automatically. Includes JWT authentication with student, lecturer and admin roles, Cloudinary file storage, and assignment submission with grading and feedback.</p>
+            <div class="tech-tags"><span class="tag">React Native</span><span class="tag">Expo</span><span class="tag">Node.js</span><span class="tag">Express 5</span><span class="tag">MongoDB</span><span class="tag">JWT</span><span class="tag">Cloudinary</span></div>
+          </div>
+        </article>
+        <article class="project-card" data-category="tools">
+          <div class="project-img placeholder" aria-hidden="true">
+            <i class="fa-solid fa-gauge-high"></i>
+            <div class="project-overlay">
+              <a href="https://github.com/Abdullah-alhar/claude-count-usage" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> View Code</a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-top">
+              <span class="project-type">Dev Tool</span>
+              <span class="project-badge">Open Source</span>
+              <a href="https://github.com/Abdullah-alhar/claude-count-usage" target="_blank" rel="noopener noreferrer" class="project-git" aria-label="Claude Count Usage on GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <h3>Claude Count Usage — Usage Tracker</h3>
+            <p>A minimal, open-source usage tracker for the Claude Desktop app. A small patch injects live session (5-hour) and weekly usage bars with reset timers straight into Claude's sidebar, plus the token count and cost of the current reply below the chat heading. No promos, no donate buttons, no telemetry — it reads only the local app state.</p>
+            <div class="tech-tags"><span class="tag">JavaScript</span><span class="tag">Claude Desktop</span><span class="tag">Open Source</span><span class="tag">Dev Tool</span></div>
           </div>
         </article>
       </div>

@@ -797,6 +797,24 @@ footer {
   transform: scale(1.08);
 }
 
+/* cards without a screenshot yet: icon on a soft gradient instead of an image */
+.project-img.placeholder {
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at 30% 20%, rgba(79, 195, 247, 0.16), transparent 62%), var(--card);
+}
+
+.project-img.placeholder > i {
+  font-size: 3.4rem;
+  color: var(--accent);
+  opacity: 0.55;
+  transition: transform 0.5s;
+}
+
+.project-card:hover .project-img.placeholder > i {
+  transform: scale(1.08);
+}
+
 /* dark layer with github button on hover */
 .project-overlay {
   position: absolute;

@@ -1,6 +1,6 @@
 # Abdullah Alhar
 
-> Abdullah Alhar is a 2nd year BSc in Information Technology student at SLIIT (Sri Lanka Institute of Information Technology) in Sri Lanka, specialising in Artificial Intelligence. Abdullah builds web apps with Spring Boot and React, mobile apps with Flutter, and machine learning projects with Python, and is looking for internships.
+> Abdullah Alhar (also written Abdullah Bin Alhar) is a 2nd year BSc in Information Technology student at SLIIT (Sri Lanka Institute of Information Technology) in Sri Lanka, specialising in Artificial Intelligence. Abdullah builds web apps with Spring Boot and React, mobile apps with Flutter, and machine learning projects with Python, works as a freelance full-stack developer, and is looking for internships.
 
 - Studying: BSc in Information Technology Specialising in Artificial Intelligence, SLIIT (2025 - present). Dean's List, Year 1 Semester 1.
 - Before university: Harvard CS50x (Introduction to Computer Science) and CS50P (Introduction to Programming with Python), online, 2024.
@@ -18,9 +18,14 @@
 
 ## Projects
 
+- [VetPOS — Offline POS & Inventory System](https://github.com/Abdullah-alhar/pos-ph): a native Windows point-of-sale and inventory app for a veterinary shop in Sri Lanka, built with .NET 10, WPF and SQLite, with a receipt designer, PDF/Excel reports, backups and an AI assistant that answers from the shop's own data. Running in beta at the shop.
 - [SmartNest Apartment Sales System](https://github.com/abdullah-alhar/smartnest-apartment-system): a full-stack web app built with React and Spring Boot that moves an apartment sales company online, from customer inquiry to reservation.
 - [Malaria Cell Image Classifier](https://github.com/abdullah-alhar/malaria-cell-classification): a CNN built from scratch with TensorFlow and Keras that classifies blood cell images as infected or healthy, with 94.2% test accuracy (0.975 ROC-AUC).
+- [LMS App — Mobile Learning Management System](https://github.com/Abdullah-alhar/LMS-App): a React Native and Express app where lecturers publish courses and timed quizzes and students enrol and take auto-marked quizzes.
 - [Student Course Registration System](https://github.com/abdullah-alhar/student-registration): a full-stack MVC web app built with Java, Spring Boot and Thymeleaf for a university OOP module.
+- [Claude Count Usage](https://github.com/Abdullah-alhar/claude-count-usage): an open-source usage tracker for the Claude Desktop app that shows session and weekly limits plus the token cost of the current reply.
+- [Greenhouse Automation System](https://github.com/abdullah-alhar/green-house): an Arduino Uno system that keeps a greenhouse at the right temperature and soil moisture.
+- [Smart Gate System](https://github.com/abdullah-alhar/smart-home): an ESP32 controller that opens a home gate from a mobile app over Wi-Fi.
 
 ## Common questions
 
@@ -34,7 +39,7 @@ Abdullah Alhar is studying for a BSc in Information Technology specialising in A
 
 ### What projects has Abdullah Alhar built?
 
-Abdullah Alhar's projects include SmartNest, an apartment sales web app built with React and Spring Boot; a Malaria Cell Image Classifier, a CNN built with TensorFlow and Keras that reached 94.2% test accuracy; and a Student Course Registration System built with Java, Spring Boot and Thymeleaf.
+Abdullah Alhar's projects include VetPOS, an offline point-of-sale and inventory system for a veterinary shop built with .NET 10, WPF and SQLite; SmartNest, an apartment sales web app built with React and Spring Boot; a Malaria Cell Image Classifier, a CNN built with TensorFlow and Keras that reached 94.2% test accuracy; an LMS App built with React Native and Express; a Student Course Registration System built with Java, Spring Boot and Thymeleaf; and Claude Count Usage, an open-source Claude Desktop usage tracker.
 
 ### What programming languages and tools does Abdullah Alhar use?
 
@@ -43,6 +48,10 @@ Abdullah Alhar works with Java, Python, JavaScript, Dart and C, using Spring Boo
 ### Is Abdullah Alhar open to internships?
 
 Yes. Abdullah Alhar is looking for internships to work on real projects and learn more, and is also open to interesting projects.
+
+### Does Abdullah Alhar do freelance work?
+
+Yes. Abdullah Alhar works as a freelance full-stack developer alongside his degree, building business software such as POS and inventory systems, web apps and AI-powered automations.
 
 ### How can I contact Abdullah Alhar?
 
